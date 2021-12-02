@@ -1,4 +1,64 @@
-.section-01{
+@import '../../styles/variables';
+@import '../../styles/rwd';
+
+.section-01 {
   background: url("../../assets/imgs/bg.jpg") no-repeat center;
   background-size: cover;
+  height: 100vh;
+}
+
+.header {
+  padding: 10px 0;
+  height: 130px;
+  @include mobile {
+    display: flex;
+    padding: 0;
+    height: 100px;
+  }
+
+  .logo {
+    @include mobile {
+      order: 2;
+      margin-top: 5px;
+    }
+
+    .logo-content {
+      width: 100px;
+      height: 100px;
+      @include mobile {
+        width: 70px;
+        height: 70px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .hotline {
+    @include mobile {
+      order: 1;
+      background-color: $primary-color;
+      svg, a {
+        color: #ffffff !important;
+      }
+    }
+
+    .phone-icon {
+      -webkit-animation-name: pulse;
+      -webkit-animation-delay: 1s;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-iteration-count: infinite;
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+  }
 }
