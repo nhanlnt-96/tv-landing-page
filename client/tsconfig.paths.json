@@ -19,6 +19,12 @@
       ],
       "styles/*": [
         "styles/*"
+      ],
+      "configs/*": [
+        "configs/*"
+      ],
+      "shared/*": [
+        "shared/*"
       ]
     }
   }
