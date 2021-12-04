@@ -5,8 +5,17 @@
       "imgs/*": [
         "assets/imgs/*"
       ],
-      "components/*": [
-        "components/*"
+      "mainLayout/*": [
+        "components/mainLayout/*"
+      ],
+      "section01/*": [
+        "components/section01/*"
+      ],
+      "animateText/*": [
+        "components/animateText/*"
+      ],
+      "registerForm/*": [
+        "components/registerForm/*"
       ],
       "styles/*": [
         "styles/*"
