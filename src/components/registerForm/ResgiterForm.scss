@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+@import '../../styles/rwd';
+
+.form-items {
+  @include flex-center;
+  flex-direction: column;
+
+  .item {
+    width: 70%;
+    @include mobile {
+      width: 90%;
+    }
+
+    input, select {
+      font-size: 1.6rem;
+      border-radius: 5px;
+    }
+  }
+
+  span {
+    font-size: 1.3rem;
+  }
+
+  button {
+    width: 120px;
+    font-size: 1.5rem;
+    @include primary-button;
+  }
+}

@@ -1,1 +1,19 @@
 $primary-color: #2B2A8F;
+$secondary-color: rgb(255, 174, 19);
+$space-top: 12px;
+
+@mixin primary-button() {
+  padding: 10px 0;
+  outline: none;
+  border: none;
+  background-color: #2B2A8F;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
