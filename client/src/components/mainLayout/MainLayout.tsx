@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Container } from 'react-bootstrap';
-import Section01 from 'components/section01/Section01';
+import Section01 from 'section01/Section01';
 import './MainLayout.scss';
 
 const MainLayout: FC = () => {

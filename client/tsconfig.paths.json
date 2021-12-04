@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "imgs/*": [
+        "assets/imgs/*"
+      ],
+      "mainLayout/*": [
+        "components/mainLayout/*"
+      ],
+      "section01/*": [
+        "components/section01/*"
+      ],
+      "animateText/*": [
+        "components/animateText/*"
+      ],
+      "registerForm/*": [
+        "components/registerForm/*"
+      ],
+      "styles/*": [
+        "styles/*"
+      ]
+    }
+  }
+}

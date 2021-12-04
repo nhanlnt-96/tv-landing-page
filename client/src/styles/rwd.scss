@@ -1,6 +1,20 @@
+$xsmall-width: 320px;
+$small-width: 414px;
 $mobile-width: 480px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
+
+@mixin xsmall {
+  @media (width: #{$xsmall-width}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (width: #{$small-width}) {
+    @content;
+  }
+}
 
 @mixin mobile {
   @media (max-width: #{$mobile-width - 1px}) {
@@ -9,7 +23,7 @@ $desktop-width: 1024px;
 }
 
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
     @content;
   }
 }
