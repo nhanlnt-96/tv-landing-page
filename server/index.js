@@ -19,6 +19,10 @@ const spreadsheetId = process.env.SPREADSHEET_ID;
 app.use(cors());
 app.use(express.json());
 
+app.get('/',(req,res)=>{
+  res.send('Welcome to Tan Van Education System');
+})
+
 app.post('/register', async (req, res) => {
   const { fullName, phoneNumber, classes } = req.body;
   try {
@@ -32,12 +36,12 @@ app.post('/register', async (req, res) => {
       }
     });
     if (response.status === 200) {
-      res.json({ success: true, data: response.config.data.values });
+      res.status(201).json({ success: true, data: response.config.data.values });
     } else {
-      res.json({ success: false, response });
+      res.status(400).json({ success: false, response });
     }
   } catch (err) {
-    res.json(err);
+    res.status(400).json(err);
   }
 })
 
