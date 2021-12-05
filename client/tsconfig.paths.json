@@ -25,6 +25,21 @@
       ],
       "shared/*": [
         "shared/*"
+      ],
+      "models/*": [
+        "models/*"
+      ],
+      "boot/*": [
+        "boot/*"
+      ],
+      "thanks/*": [
+        "pages/thanks/*"
+      ],
+      "homepage/*": [
+        "pages/homepage/*"
+      ],
+      "pageNotFound/*": [
+        "pages/pageNotFound/*"
       ]
     }
   }

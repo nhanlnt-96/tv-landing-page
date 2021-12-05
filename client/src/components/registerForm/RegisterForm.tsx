@@ -1,23 +1,22 @@
 import React, { FC, useState } from 'react';
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 import { classes } from 'configs/classes';
 import { nameRegex, phoneRegex } from 'shared/regex';
+import { IUser } from 'models/users';
+import { appendSpreadsheet } from 'boot/googleSpreadsheet';
 import './ResgiterForm.scss';
 
-interface IUserInfo {
-  fullName?: string;
-  phoneNumber?: string;
-  classes?: string;
-}
-
 const RegisterForm: FC = () => {
-  const [formInput, setFormInput] = useState<IUserInfo>({
+  const initialInput: IUser = {
     fullName: '',
     phoneNumber: '',
     classes: '',
-  });
-  const [errors, setErrors] = useState<IUserInfo>({});
+  };
+  const [formInput, setFormInput] = useState<IUser>(initialInput);
+  const [errors, setErrors] = useState<any>({});
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const navigate = useNavigate();
   const onGetInputHandler = (field: string, value: string) => {
     setFormInput({
       ...formInput,
@@ -26,7 +25,7 @@ const RegisterForm: FC = () => {
   };
   const validateInput = () => {
     const { fullName, phoneNumber, classes } = formInput;
-    const newErrors: IUserInfo = {};
+    const newErrors: any = {};
     if ((fullName && !nameRegex.test(fullName)) || !fullName) {
       newErrors.fullName =
         'Họ tên nhập vào không được để trống, không được chứa số, hoặc các' +
@@ -34,8 +33,8 @@ const RegisterForm: FC = () => {
     }
 
     if ((phoneNumber && !phoneRegex.test(phoneNumber)) || !phoneNumber) {
-      newErrors.phoneNumber = 'Số điện thoại sai hoặc Bạn chưa nhập số điện' +
-        ' thoại.';
+      newErrors.phoneNumber =
+        'Số điện thoại sai hoặc Bạn chưa nhập số điện thoại.';
     }
 
     if (!classes) {
@@ -46,13 +45,23 @@ const RegisterForm: FC = () => {
   };
   const onRegisterBtnClick = async () => {
     const newErrors = validateInput();
+    setIsLoading(true);
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+      setIsLoading(false);
     } else {
-      const response = await axios.post(
-        'https://tv-register-api.herokuapp.com/register', { formInput }
-      );
-      console.log(response);
+      const { fullName, phoneNumber, classes } = formInput;
+      const res = await appendSpreadsheet({
+        fullName,
+        phoneNumber,
+        classes,
+        status: 'Chưa liên hệ',
+      });
+      if (res?._rawData) {
+        setIsLoading(false);
+        setFormInput(initialInput);
+        navigate('/thanks');
+      }
     }
   };
   return (
@@ -86,9 +95,10 @@ const RegisterForm: FC = () => {
           aria-label="Default select example"
           name="classes"
           onChange={(e) => onGetInputHandler('classes', e.target.value)}
+          defaultValue=""
           isInvalid={!!errors.classes}
         >
-          <option selected disabled>
+          <option value="" disabled>
             Chọn lớp của bé
           </option>
           {classes.map((val, index) => (
@@ -109,11 +119,12 @@ const RegisterForm: FC = () => {
         disabled={
           (!formInput.fullName ||
             !formInput.phoneNumber ||
-            !formInput.classes) &&
+            !formInput.classes ||
+            isLoading) &&
           true
         }
       >
-        Đăng ký
+        {isLoading ? 'Đang đăng ký' : 'Đăng ký'}
       </Button>
     </Form>
   );
