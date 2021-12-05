@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
-import { Container } from 'react-bootstrap';
-import Section01 from 'section01/Section01';
-import './MainLayout.scss';
+import { Routes, Route } from 'react-router-dom';
+import { routes } from 'configs/routes';
 
 const MainLayout: FC = () => {
   return (
-    <Container className="main-layout" fluid>
-      <Section01 />
-    </Container>
+    <Routes>
+      {routes.map((val, index) => {
+        return <Route key={index} path={val.path} element={val.module} />;
+      })}
+    </Routes>
   );
 };
 

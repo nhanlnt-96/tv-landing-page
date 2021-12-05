@@ -93,9 +93,7 @@
 }
 
 .section01-main-content .detail-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   font-size: 2rem;
   margin-top: 24px;
   margin-bottom: 32px;
@@ -133,9 +131,13 @@
     justify-content: center;
     align-items: center;
 
+    //.col-height {
+    //  height: 100%;
+    //}
+
     .register-desc {
-      text-align: center;
       padding: 0 10px;
+      text-align: center;
 
       .register-title {
         font-weight: 700;

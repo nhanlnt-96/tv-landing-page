@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.thank-container {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../assets/imgs/bg.jpg") no-repeat center;
+  background-size: cover;
+
+  .thank-header {
+    .header {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  .thank-content {
+    height: calc(100vh - 130px);
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 10px;
+
+    p {
+      font-size: 6rem;
+      font-weight: 700;
+    }
+
+    span {
+      font-size: 2.5rem;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    @include mobile {
+      p {
+        font-size: 2.5rem;
+      }
+
+      span {
+        font-size: 1.5rem;
+      }
+    }
+
+    @include tablet {
+      p {
+        font-size: 4.5rem;
+      }
+
+      span {
+        font-size: 2rem;
+      }
+    }
+  }
+}

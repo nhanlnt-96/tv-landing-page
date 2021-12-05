@@ -14,14 +14,19 @@ const SectionMainContent: FC = () => {
         </Row>
         <Container className="register-form">
           <Row>
-            <Col sm={12} md={6} lg={6} className="register-desc">
+            <Col
+              sm={12}
+              md={6}
+              lg={6}
+              className="register-desc col-height d-flex flex-column justify-content-center align-items-center"
+            >
               <h2 className="register-title">NHẬN TƯ VẤN MIỄN PHÍ</h2>
               <p className="register-subtitle">
                 Ba mẹ đăng ký để nhận tư vấn Miễn Phí chương trình tiếng Anh
                 online cho trẻ trên Tân Văn eLearning tại đây:
               </p>
             </Col>
-            <Col sm={12} md={6} lg={6} className="border-left-line">
+            <Col sm={12} md={6} lg={6} className="border-left-line col-height">
               <RegisterForm />
             </Col>
           </Row>
