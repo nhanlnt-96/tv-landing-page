@@ -23,29 +23,19 @@ const RegisterForm: FC = () => {
       ...formInput,
       [field]: value,
     });
-    const newErrors = validateInput();
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-    }
   };
   const validateInput = () => {
     const { fullName, phoneNumber, classes } = formInput;
     const newErrors: IUserInfo = {};
-    if (fullName) {
-      if (!nameRegex.test(fullName)) {
-        newErrors.fullName =
-          'Họ tên nhập vào không được chứa số, hoặc các ký tự đặc biệt.';
-      }
-    } else if (!fullName) {
-      newErrors.fullName = 'Họ tên không được để trống.';
+    if ((fullName && !nameRegex.test(fullName)) || !fullName) {
+      newErrors.fullName =
+        'Họ tên nhập vào không được để trống, không được chứa số, hoặc các' +
+        ' ký tự đặc biệt.';
     }
 
-    if (phoneNumber) {
-      if (!phoneRegex.test(phoneNumber)) {
-        newErrors.phoneNumber = 'Số điện thoại không đúng.';
-      }
-    } else if (!phoneNumber) {
-      newErrors.phoneNumber = 'Số điện thoại không được để trống.';
+    if ((phoneNumber && !phoneRegex.test(phoneNumber)) || !phoneNumber) {
+      newErrors.phoneNumber = 'Số điện thoại sai hoặc Bạn chưa nhập số điện' +
+        ' thoại.';
     }
 
     if (!classes) {
@@ -55,11 +45,15 @@ const RegisterForm: FC = () => {
     return newErrors;
   };
   const onRegisterBtnClick = async () => {
-    const response = await axios.post(
-      'https://tv-register-api.herokuapp.com/register',
-      formInput,
-    );
-    console.log(response);
+    const newErrors = validateInput();
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+    } else {
+      const response = await axios.post(
+        'https://tv-register-api.herokuapp.com/register', { formInput }
+      );
+      console.log(response);
+    }
   };
   return (
     <Form className="form-items">
