@@ -5,7 +5,11 @@ import Header from 'header/Header';
 
 import './Section01.scss';
 
-const Section01: FC<any> = ({ btnClick }) => {
+interface IProps {
+  click: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+const Section01: FC<IProps> = ({ click }) => {
   return (
     <Container fluid className="section-01">
       <Header />
@@ -15,10 +19,7 @@ const Section01: FC<any> = ({ btnClick }) => {
             <h1>Chương trình tiếng anh khởi đầu cho trẻ 3-7 tuổi</h1>
           </Row>
           <Row className="detail-btn">
-            <button onClick={btnClick}>
-              {/*<a href="#main-content">TÌM HIỂU THÊM</a>*/}
-              TÌM HIỂU THÊM
-            </button>
+            <button onClick={click}>TÌM HIỂU THÊM</button>
           </Row>
           <Container className="register-form">
             <Row>
@@ -34,12 +35,7 @@ const Section01: FC<any> = ({ btnClick }) => {
                   online cho trẻ trên Tân Văn eLearning tại đây:
                 </p>
               </Col>
-              <Col
-                sm={12}
-                md={6}
-                lg={6}
-                className="border-left-line col-height"
-              >
+              <Col sm={12} md={6} lg={6} className="border-left-line">
                 <RegisterForm />
               </Col>
             </Row>

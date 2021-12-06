@@ -13,6 +13,10 @@
 .App {
   //width: 100vw;
   min-height: 100vh;
+
+  h1, h2, h3, h4, h5, h6, p, span, b {
+    margin-bottom: 0;
+  }
 }
 
 // animation keyframes

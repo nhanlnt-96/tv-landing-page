@@ -5,15 +5,15 @@ import { Container } from 'react-bootstrap';
 import './HomePage.scss';
 
 const HomePage: FC = () => {
-  const moreDetailRef = useRef();
-  const onMoreDetailBtnClick = () => {
-    // @ts-ignore
-    moreDetailRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
+  const section02Ref = useRef<HTMLDivElement>(null);
+  // @ts-ignore
+  const onMoveToSection02BtnClick = () => section02Ref.current.scrollIntoView();
   return (
     <Container className="homepage-container" fluid>
-      <Section01 btnClick={onMoreDetailBtnClick} />
-      <Section02 ref={moreDetailRef} />
+      <Section01 click={onMoveToSection02BtnClick} />
+      <div ref={section02Ref} className="section02-ref">
+        <Section02 />
+      </div>
     </Container>
   );
 };

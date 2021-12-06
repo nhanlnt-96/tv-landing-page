@@ -1,14 +1,25 @@
 $primary-color: #2B2A8F;
 $secondary-color: rgb(255, 174, 19);
+$space-primary: 36px;
+$space-secondary: 24px;
 
-@mixin primary-button() {
+@mixin primary-button {
+  width: 200px;
+  font-size: 2rem;
   padding: 10px 0;
   outline: none;
   border: none;
   background-color: #2B2A8F;
   color: #fff;
-  font-weight: 600;
+  font-weight: bold;
   border-radius: 10px;
+}
+
+@mixin pulse-animate-btn {
+  -webkit-animation-name: pulse;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
 }
 
 @mixin flex-center {
