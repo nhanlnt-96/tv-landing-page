@@ -46,6 +46,9 @@
       ],
       "header/*": [
         "components/header/*"
+      ],
+      "section03/*": [
+        "components/section03/*"
       ]
     }
   }

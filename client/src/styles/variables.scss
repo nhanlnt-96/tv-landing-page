@@ -27,3 +27,8 @@ $space-secondary: 24px;
   justify-content: center;
   align-items: center;
 }
+
+@mixin primary-text-size {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
