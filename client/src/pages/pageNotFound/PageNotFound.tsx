@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import SectionHeader from 'section01/components/SectionHeader';
 import { useNavigate } from 'react-router-dom';
+import Header from 'header/Header';
 
 import './PageNotFound.scss';
 
@@ -15,7 +15,7 @@ const PageNotFound: FC = () => {
         </button>
       </div>
       <div className="pnf-footer">
-        <SectionHeader />
+        <Header />
       </div>
     </div>
   );

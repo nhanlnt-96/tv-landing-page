@@ -1,0 +1,106 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.section-02 {
+  margin-top: $space-primary;
+}
+
+.section-02 .section02-title {
+  text-align: center;
+
+  p {
+    @include primary-text-size;
+    @include mobile {
+      font-size: 2.1rem;
+    }
+  }
+}
+
+.diagram-container {
+  @include flex-center;
+  flex-direction: column;
+  margin-top: $space-secondary;
+  padding-left: 0;
+  padding-right: 0;
+
+  .diagram-items {
+    width: 80%;
+    height: 60px;
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $space-secondary;
+    }
+
+    .icon-item {
+      @include flex-center;
+      justify-content: unset;
+      position: relative;
+
+      .circle {
+        background-color: $secondary-color;
+        height: 50px;
+        border-radius: 100%;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          color: #ffffff;
+          font-size: 4rem;
+        }
+      }
+
+      .line {
+        width: calc(100% - 65px);
+        height: 10px;
+        background-color: rgb(138, 138, 138);
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .content-item {
+      background-color: $primary-color;
+      color: #ffffff;
+      @include flex-center;
+      justify-content: unset;
+      padding: 0 15px;
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 600;
+        @include mobile {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+.section02-description {
+  text-align: justify;
+  margin-top: $space-secondary !important;
+
+  p, b {
+    font-size: 1.8rem;
+  }
+}
+
+.section02-register-btn {
+  margin-top: $space-secondary !important;
+  @include flex-center;
+
+  button {
+    @include primary-button;
+    @include pulse-animate-btn;
+    background-color: $secondary-color;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import SectionHeader from 'section01/components/SectionHeader';
+import Header from 'header/Header';
 
 import './ThankPage.scss';
 
@@ -7,7 +7,7 @@ const ThankPage: FC = () => {
   return (
     <div className="thank-container">
       <div className="thank-header">
-        <SectionHeader />
+        <Header />
       </div>
       <div className="thank-content">
         <p>Cảm ơn quý phụ huynh đã để lại thông tin</p>

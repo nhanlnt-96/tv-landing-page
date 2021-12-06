@@ -3,7 +3,9 @@ import { Col, Image, Row } from 'react-bootstrap';
 import Logo from 'imgs/logo.png';
 import PhoneIcon from '@mui/icons-material/Phone';
 
-const SectionHeader: FC = () => {
+import './Header.scss';
+
+const Header: FC = () => {
   return (
     <Row className="header">
       <Col
@@ -33,4 +35,4 @@ const SectionHeader: FC = () => {
   );
 };
 
-export default SectionHeader;
+export default Header;
