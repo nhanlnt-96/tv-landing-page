@@ -1,0 +1,74 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.section-02 {
+  padding: 20px 0;
+
+}
+
+.section-02 .section02-title {
+  text-align: center;
+
+  p {
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+}
+
+.diagram-container {
+  @include flex-center;
+  flex-direction: column;
+  margin-top: 24px;
+
+  .diagram-items {
+    width: 80%;
+    height: 60px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    .icon-item {
+      @include flex-center;
+      justify-content: unset;
+      position: relative;
+
+      .circle {
+        background-color: rgb(250, 149, 51);
+        height: 50px;
+        border-radius: 100%;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          color: #ffffff;
+          font-size: 4rem;
+        }
+      }
+
+      .line {
+        width: calc(100% - 65px);
+        height: 10px;
+        background-color: rgb(138, 138, 138);
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .content-item {
+      background-color: $primary-color;
+      color: #ffffff;
+      @include flex-center;
+      justify-content: unset;
+      padding: 0 15px;
+
+      p {
+        font-size: 1.6rem;
+        margin-bottom: 0;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,16 +1,52 @@
 import React, { FC } from 'react';
-import { Row } from 'react-bootstrap';
-import SectionHeader from 'section01/components/SectionHeader';
-import SectionMainContent from 'section01/components/SectionMainContent';
+import { Col, Container, Row } from 'react-bootstrap';
+import RegisterForm from 'registerForm/RegisterForm';
+import Header from 'header/Header';
 
 import './Section01.scss';
 
-const Section01: FC = () => {
+const Section01: FC<any> = ({ btnClick }) => {
   return (
-    <Row className="section-01">
-      <SectionHeader />
-      <SectionMainContent />
-    </Row>
+    <Container fluid className="section-01">
+      <Header />
+      <Row>
+        <Container fluid className="section01-main-content">
+          <Row className="title">
+            <h1>Chương trình tiếng anh khởi đầu cho trẻ 3-7 tuổi</h1>
+          </Row>
+          <Row className="detail-btn">
+            <button onClick={btnClick}>
+              {/*<a href="#main-content">TÌM HIỂU THÊM</a>*/}
+              TÌM HIỂU THÊM
+            </button>
+          </Row>
+          <Container className="register-form">
+            <Row>
+              <Col
+                sm={12}
+                md={6}
+                lg={6}
+                className="register-desc col-height d-flex flex-column justify-content-center align-items-center"
+              >
+                <h2 className="register-title">NHẬN TƯ VẤN MIỄN PHÍ</h2>
+                <p className="register-subtitle">
+                  Ba mẹ đăng ký để nhận tư vấn Miễn Phí chương trình tiếng Anh
+                  online cho trẻ trên Tân Văn eLearning tại đây:
+                </p>
+              </Col>
+              <Col
+                sm={12}
+                md={6}
+                lg={6}
+                className="border-left-line col-height"
+              >
+                <RegisterForm />
+              </Col>
+            </Row>
+          </Container>
+        </Container>
+      </Row>
+    </Container>
   );
 };
 

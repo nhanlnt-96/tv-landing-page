@@ -5,170 +5,121 @@
   background: url("../../assets/imgs/bg3.png") no-repeat center;
   background-size: cover;
   height: 800px;
-}
 
-.header {
-  padding: 10px 0;
-  height: 130px;
-  @include mobile {
-    display: flex;
-    padding: 0 !important;
+
+  .section01-main-content {
+    height: calc(800px - 130px);
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 12px;
+    @include flex-center;
+    flex-direction: column;
   }
 
-  .logo {
-    @include mobile {
-      order: 2;
-      margin-top: 5px;
-    }
+  .section01-main-content .title {
+    @include flex-center;
 
-    .logo-content {
-      width: 100px;
-      height: 100px;
+    h1 {
+      font-weight: 700;
+      font-family: 'Signika Negative', sans-serif;
+      font-size: 8rem;
+      text-align: center;
+      color: #ffffff;
+      @include tablet {
+        font-size: 7rem;
+      }
       @include mobile {
-        width: 70px;
-        height: 70px;
+        font-size: 4rem;
       }
-
-      img {
-        width: 100%;
-        height: 100%;
+      @include xsmall {
+        font-size: 3rem;
       }
     }
   }
 
-  .hotline {
-    @include mobile {
-      order: 1;
-      background-color: $primary-color;
-      svg, a {
-        color: #ffffff !important;
-      }
-    }
+  .section01-main-content .detail-btn {
+    @include flex-center;
+    margin-top: 24px;
+    margin-bottom: 32px;
 
-    .phone-icon {
+    button {
+      a {
+        color: #ffffff;
+        font-size: 2rem;
+        text-decoration: none;
+      }
+
+      @include primary-button;
+      width: 200px;
       -webkit-animation-name: pulse;
       -webkit-animation-delay: 1s;
       -webkit-animation-duration: 1s;
       -webkit-animation-iteration-count: infinite;
-    }
-
-    a {
-      color: $primary-color;
-      text-decoration: none;
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-left: 5px;
+      @include mobile {
+        width: 150px;
+        font-size: 1.5rem;
+      }
     }
   }
-}
 
-.section01-main-content {
-  height: calc(800px - 130px);
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-top: $space-top;
-  @include flex-center;
-  flex-direction: column;
-}
-
-.section01-main-content .title {
-  @include flex-center;
-
-  h1 {
-    font-weight: 700;
-    font-family: 'Signika Negative', sans-serif;
-    font-size: 8rem;
-    text-align: center;
-    color: #ffffff;
+  .section01-main-content .register-form {
+    width: 70%;
+    min-height: 295px;
+    border: 4px dashed $secondary-color;
+    border-radius: 25px;
+    background-color: rgb(189, 242, 250);
+    padding: 10px 0;
+    @include mobile {
+      width: 100%;
+    }
     @include tablet {
-      font-size: 7rem;
+      width: 100%;
     }
-    @include mobile {
-      font-size: 4rem;
-    }
-    @include xsmall {
-      font-size: 3rem;
-    }
-  }
-}
 
-.section01-main-content .detail-btn {
-  @include flex-center;
-  font-size: 2rem;
-  margin-top: 24px;
-  margin-bottom: 32px;
+    .row {
+      height: 100%;
+      justify-content: center;
+      align-items: center;
 
-  button {
-    @include primary-button;
-    width: 200px;
-    -webkit-animation-name: pulse;
-    -webkit-animation-delay: 1s;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-    @include mobile {
-      width: 150px;
-      font-size: 1.5rem;
-    }
-  }
-}
+      //.col-height {
+      //  height: 100%;
+      //}
 
-.section01-main-content .register-form {
-  width: 70%;
-  min-height: 295px;
-  border: 4px dashed $secondary-color;
-  border-radius: 25px;
-  background-color: rgb(189, 242, 250);
-  padding: 10px 0;
-  @include mobile {
-    width: 100%;
-  }
-  @include tablet {
-    width: 100%;
-  }
+      .register-desc {
+        padding: 0 10px;
+        text-align: center;
 
-  .row {
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-
-    //.col-height {
-    //  height: 100%;
-    //}
-
-    .register-desc {
-      padding: 0 10px;
-      text-align: center;
-
-      .register-title {
-        font-weight: 700;
-        font-size: 2.8rem;
-        margin-bottom: 50px;
-        @include mobile {
-          font-size: 2.4rem;
-          margin-bottom: 10px;
+        .register-title {
+          font-weight: 700;
+          font-size: 2.8rem;
+          margin-bottom: 50px;
+          @include mobile {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+          }
         }
-      }
 
-      .register-subtitle {
-        font-size: 2.3rem;
-        margin-bottom: 0;
-        @include mobile {
-          font-size: 1.9rem;
+        .register-subtitle {
+          font-size: 2.3rem;
+          margin-bottom: 0;
+          @include mobile {
+            font-size: 1.9rem;
+          }
         }
       }
     }
-  }
 
-  .border-left-line {
-    border-left: 2px solid $secondary-color;
-    @include mobile {
-      margin-top: 20px;
-      border-left: unset;
+    .border-left-line {
+      border-left: 2px solid $secondary-color;
+      @include mobile {
+        margin-top: 20px;
+        border-left: unset;
+      }
     }
-  }
 
-  form {
-    width: 100%;
-    height: 100%;
+    form {
+      width: 100%;
+      height: 100%;
+    }
   }
 }

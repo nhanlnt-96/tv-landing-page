@@ -40,6 +40,12 @@
       ],
       "pageNotFound/*": [
         "pages/pageNotFound/*"
+      ],
+      "section02/*": [
+        "components/section02/*"
+      ],
+      "header/*": [
+        "components/header/*"
       ]
     }
   }
