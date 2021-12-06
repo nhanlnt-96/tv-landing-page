@@ -8,7 +8,10 @@ import './HomePage.scss';
 const HomePage: FC = () => {
   const section02Ref = useRef<HTMLDivElement>(null);
   // @ts-ignore
-  const onMoveToSection02BtnClick = () => section02Ref.current.scrollIntoView();
+  const onMoveToSection02BtnClick = () => {
+    // @ts-ignore
+    section02Ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <Container className="homepage-container" fluid>
       <Section01 click={onMoveToSection02BtnClick} />
