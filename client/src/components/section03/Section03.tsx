@@ -7,7 +7,7 @@ import { section03Content } from 'configs/section03Content';
 
 const Section03: FC = () => {
   return (
-    <Container fluid className="section-03">
+    <Container className="section-03">
       <Row className="section03-title">
         <h6>
           CHỈ <span style={{ color: '#ff0000' }}>30 PHÚT/NGÀY</span> TRÊN EDUPIA

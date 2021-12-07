@@ -2,6 +2,7 @@ import React, { FC, useRef } from 'react';
 import Section01 from 'section01/Section01';
 import Section02 from 'section02/Section02';
 import Section03 from 'section03/Section03';
+import Section04 from 'section04/Section04';
 import { Container } from 'react-bootstrap';
 import './HomePage.scss';
 
@@ -15,10 +16,15 @@ const HomePage: FC = () => {
   return (
     <Container className="homepage-container" fluid>
       <Section01 click={onMoveToSection02BtnClick} />
-      <div ref={section02Ref} className="section02-ref">
+      <div ref={section02Ref} className="section02-ref space-top">
         <Section02 />
       </div>
-      <Section03 />
+      <div className="space-top">
+        <Section03 />
+      </div>
+      <div className="space-top">
+        <Section04 />
+      </div>
     </Container>
   );
 };

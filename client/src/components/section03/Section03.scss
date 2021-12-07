@@ -2,7 +2,6 @@
 @import "../../styles/rwd";
 
 .section-03 {
-  margin-top: $space-primary;
   @include flex-center;
   flex-direction: column;
 }
@@ -11,10 +10,6 @@
   &-content {
     width: 100%;
     margin-top: $space-secondary !important;
-    padding: 0 30px;
-    @include mobile {
-      padding: 0 10px;
-    }
 
     .content {
       display: flex;

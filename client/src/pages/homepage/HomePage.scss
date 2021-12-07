@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .homepage-container {
   padding-right: 0 !important;
   padding-left: 0 !important;
@@ -7,5 +9,9 @@
   .row {
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+
+  .space-top {
+    margin-top: $space-primary !important;
   }
 }
