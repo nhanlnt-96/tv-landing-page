@@ -1,0 +1,145 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.section-05 {
+  height: 600px;
+  @include tablet {
+    height: 500px;
+  }
+}
+
+.section05 {
+  &-title {
+    height: 40px;
+    text-align: center;
+    @include flex-center;
+
+    h6 {
+      @include primary-text-size;
+      @include tablet {
+        font-size: 2.6rem;
+      }
+    }
+  }
+
+  &-content {
+    margin-top: $space-secondary !important;
+    height: calc(500px - 40px - 24px);
+
+    .content-item {
+      @include flex-center;
+      flex-direction: column;
+      position: relative;
+
+      .img-item, .content {
+        width: 100%;
+      }
+
+      .img-item {
+        flex: 2;
+        background: url("../../assets/imgs/tree.png") no-repeat bottom center;
+        position: relative;
+
+        .img-content {
+          width: 50%;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+
+          p {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            @include flex-center;
+            flex-direction: column;
+            color: $primary-color;
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        .img-item {
+          background-size: 75%;
+
+          .img-content {
+            transform: translate(-45%, -40%);
+            @include tablet {
+              transform: translate(-45%, -50%);
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .img-item {
+          background-size: 85%;
+
+          .img-content {
+            transform: translate(-45%, -65%);
+            @include tablet {
+              transform: translate(-45%, -75%);
+            }
+
+            p {
+              font-size: 1.6rem;
+            }
+          }
+        }
+
+        .content .icon-item {
+          svg {
+            font-size: 4rem;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .img-item {
+          background-size: 95%;
+
+          .img-content {
+            transform: translate(-45%, -110%);
+            @include tablet {
+              transform: translate(-45%, -85%);
+            }
+
+            p {
+              font-size: 1.9rem;
+            }
+          }
+        }
+
+        .content .icon-item {
+          svg {
+            font-size: 6rem;
+          }
+        }
+      }
+
+      .content {
+        width: 200px;
+        flex: 1;
+        background-color: $primary-color;
+        border-radius: 10px;
+        padding: 10px;
+        @include flex-center;
+
+        .icon-item {
+          position: absolute;
+          left: 0;
+
+          svg {
+            font-weight: bold;
+            color: $secondary-color;
+          }
+        }
+
+        p {
+          font-size: 1.4rem;
+          color: #ffffff;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
