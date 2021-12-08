@@ -1,0 +1,48 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.section06 {
+  &-title {
+    text-align: center;
+
+    h6 {
+      @include primary-text-size;
+    }
+
+    p {
+      margin-top: $space-secondary;
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+  }
+
+  &-pronunciation {
+    margin-top: $space-secondary !important;
+  }
+}
+
+.section06-pronunciation .lp {
+  &-container {
+    @include flex-center;
+    flex-direction: column;
+  }
+
+  &-title {
+    width: 360px;
+    background-color: $primary-color;
+    border-radius: 50px;
+    height: 40px;
+    text-align: center;
+    @include flex-center;
+
+    p {
+      color: #ffffff;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
+  &-video {
+    margin-top: $space-secondary !important;
+  }
+}

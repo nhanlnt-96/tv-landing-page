@@ -58,6 +58,12 @@
       ],
       "section06/*": [
         "components/section06/*"
+      ],
+      "node_modules/*": [
+        "../node_modules/*"
+      ],
+      "videoPlayer/*": [
+        "videoPlayer/*"
       ]
     }
   }
