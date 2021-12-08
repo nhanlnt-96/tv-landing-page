@@ -3,28 +3,52 @@
 
 .section-05 {
   height: 600px;
+  @include flex-center;
   @include tablet {
     height: 500px;
+  }
+  @include mobile {
+    display: unset;
   }
 }
 
 .section05 {
+  &-container {
+    width: 960px;
+    @include mobile {
+      width: 100%;
+    }
+  }
+
   &-title {
     height: 40px;
     text-align: center;
     @include flex-center;
+    @include mobile {
+      height: unset;
+    }
 
     h6 {
+      color: $primary-color;
       @include primary-text-size;
       @include tablet {
         font-size: 2.6rem;
+      }
+      @include mobile {
+        font-size: 2.2rem;
       }
     }
   }
 
   &-content {
     margin-top: $space-secondary !important;
-    height: calc(500px - 40px - 24px);
+    height: calc(600px - 40px - 24px);
+    @include tablet {
+      height: calc(500px - 40px - 24px);
+    }
+    @include mobile {
+      display: none !important;
+    }
 
     .content-item {
       @include flex-center;
@@ -62,9 +86,12 @@
           background-size: 75%;
 
           .img-content {
-            transform: translate(-45%, -40%);
+            transform: translate(-45%, 0);
             @include tablet {
-              transform: translate(-45%, -50%);
+              transform: translate(-45%, 15%);
+              p {
+                font-size: 1.2rem;
+              }
             }
           }
         }
@@ -76,12 +103,18 @@
 
           .img-content {
             transform: translate(-45%, -65%);
+            @include desktop {
+              transform: translate(-45%, -45%);
+            }
             @include tablet {
-              transform: translate(-45%, -75%);
+              transform: translate(-45%, -20%);
             }
 
             p {
               font-size: 1.6rem;
+              @include tablet {
+                font-size: 1.3rem;
+              }
             }
           }
         }
@@ -89,6 +122,10 @@
         .content .icon-item {
           svg {
             font-size: 4rem;
+          }
+
+          @include tablet {
+            left: -5%;
           }
         }
       }
@@ -98,13 +135,16 @@
           background-size: 95%;
 
           .img-content {
-            transform: translate(-45%, -110%);
+            transform: translate(-45%, -60%);
             @include tablet {
-              transform: translate(-45%, -85%);
+              transform: translate(-45%, -40%);
             }
 
             p {
               font-size: 1.9rem;
+              @include tablet {
+                font-size: 1.5rem;
+              }
             }
           }
         }
@@ -112,6 +152,13 @@
         .content .icon-item {
           svg {
             font-size: 6rem;
+          }
+
+          @include tablet {
+            left: -10%;
+            svg {
+              font-size: 5rem;
+            }
           }
         }
       }
@@ -138,6 +185,66 @@
           font-size: 1.4rem;
           color: #ffffff;
           text-align: justify;
+        }
+      }
+    }
+  }
+}
+
+.section05-content-mobile {
+  margin-top: $space-secondary !important;
+  @include flex-center;
+  flex-direction: column;
+
+  .content-mobile {
+    &-shape {
+      width: 230px;
+      height: 75px;
+      background-color: $primary-color;
+      clip-path: ellipse(50% 50% at 50% 50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+
+      p {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+
+    &-line {
+      width: 0;
+      height: 40px;
+      border: none;
+      border-left: 3px solid $primary-color;
+      padding: 0;
+    }
+
+    &-main {
+      background-color: $secondary-color;
+      padding: 10px;
+      border-radius: 10px;
+      width: 95%;
+
+      p {
+        font-weight: bold;
+        @include flex-center;
+        justify-content: unset;
+        font-size: 1.7rem;
+
+        svg {
+          color: #ffffff;
+          font-size: 3rem;
+          margin-right: 5px;
+        }
+      }
+
+      .sub-main {
+        text-align: center;
+
+        span {
+          font-size: 1.7rem;
         }
       }
     }

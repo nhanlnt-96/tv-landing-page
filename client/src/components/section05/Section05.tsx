@@ -1,34 +1,32 @@
-import React, { FC } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { section05Content } from 'configs/section05Content';
+import React, { FC, useLayoutEffect, useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
 
 import './Section05.scss';
+import { ContentSection, ContentSectionMobile } from 'section05/components';
+
+const useWindowSize = () => {
+  const [currentWidth, setCurrentWidth] = useState(0);
+  useLayoutEffect(() => {
+    const updateSize = () => {
+      setCurrentWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  return currentWidth;
+};
 
 const Section05: FC = () => {
+  const currentWidth = useWindowSize();
   return (
     <Container className="section-05">
-      <Row className="section05-title">
-        <h6>LỘ TRÌNH HỌC TOÀN DIỆN TỪ CƠ BẢN ĐẾN NÂNG CAO </h6>
-      </Row>
-      <Row className="section05-content">
-        {section05Content.map((val, index) => (
-          <Col key={index} className="content-item">
-            <div className="img-item">
-              <div className="img-content">
-                <p>GIAI ĐOẠN {val.step}:</p>
-                <p>{val.title}</p>
-              </div>
-            </div>
-            <div className="content">
-              <div className="icon-item">
-                {val.step > 1 && <ArrowForwardIosIcon />}
-              </div>
-              <p>{val.content}</p>
-            </div>
-          </Col>
-        ))}
-      </Row>
+      <div className="section05-container">
+        <Row className="section05-title">
+          <h6>LỘ TRÌNH HỌC TOÀN DIỆN TỪ CƠ BẢN ĐẾN NÂNG CAO </h6>
+        </Row>
+        {currentWidth > 480 ? <ContentSection /> : <ContentSectionMobile />}
+      </div>
     </Container>
   );
 };
