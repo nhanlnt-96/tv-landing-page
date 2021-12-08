@@ -55,6 +55,9 @@
       ],
       "section05/*": [
         "components/section05/*"
+      ],
+      "section06/*": [
+        "components/section06/*"
       ]
     }
   }
