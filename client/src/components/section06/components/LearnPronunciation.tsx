@@ -1,15 +1,5 @@
 import { FC } from 'react';
-import VideoPlayer from '../../videoPlayer/VideoPlayer';
-
-const videoJsOptions = {
-  techOrder: ['youtube'],
-  sources: [
-    {
-      src: 'https://www.youtube.com/watch?v=0pqkFrReDMo',
-      type: 'video/youtube',
-    },
-  ],
-};
+import VideoPlayer from 'videoPlayer/VideoPlayer';
 
 export const LearnPronunciation: FC = () => {
   return (
@@ -18,7 +8,7 @@ export const LearnPronunciation: FC = () => {
         <p>1. Học phát âm như trẻ bản ngữ</p>
       </div>
       <div className="lp-video">
-        <VideoPlayer options={videoJsOptions} />
+        <VideoPlayer videoCode={'0pqkFrReDMo'} />
       </div>
     </div>
   );

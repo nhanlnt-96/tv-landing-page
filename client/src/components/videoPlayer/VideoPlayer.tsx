@@ -1,40 +1,19 @@
-import React, { FC, useRef, useEffect } from 'react';
-import videojs from 'video.js';
-import 'video.js/dist/video-js.css';
+import React, { FC } from 'react';
+import YouTube from '@u-wave/react-youtube';
 
-interface IVideoPlayerProps {
-  options: videojs.PlayerOptions;
+interface Props {
+  videoCode: string;
 }
 
-const initialOptions: videojs.PlayerOptions = {
-  controls: true,
-  fluid: true,
-  controlBar: {
-    volumePanel: {
-      inline: false,
-    },
-  },
-};
-
-const VideoPlayer: FC<IVideoPlayerProps> = ({ options }) => {
-  const videoNode = useRef<HTMLVideoElement>();
-  const player = useRef<videojs.Player>();
-  useEffect(() => {
-    // @ts-ignore
-    player.current = videojs(videoNode.current, {
-      ...initialOptions,
-      ...options,
-    }).ready(function () {
-      // console.log('onPlayerReady', this);
-    });
-    return () => {
-      if (player.current) {
-        player.current.dispose();
-      }
-    };
-  }, [options]);
-  // @ts-ignore
-  return <video ref={videoNode} className="video-js" />;
+const VideoPlayer: FC<Props> = ({ videoCode }) => {
+  return (
+    <YouTube
+      video={videoCode}
+      width="100%"
+      height="100%"
+      showRelatedVideos={false}
+    />
+  );
 };
 
 export default VideoPlayer;

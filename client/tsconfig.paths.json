@@ -63,7 +63,7 @@
         "../node_modules/*"
       ],
       "videoPlayer/*": [
-        "videoPlayer/*"
+        "components/videoPlayer/*"
       ]
     }
   }
