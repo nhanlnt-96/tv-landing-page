@@ -10,6 +10,7 @@ export const LearnPronunciation: FC = () => {
       <div className="lp-video">
         <VideoPlayer videoCode={'0pqkFrReDMo'} />
       </div>
+      <div className="lp-content"></div>
     </div>
   );
 };

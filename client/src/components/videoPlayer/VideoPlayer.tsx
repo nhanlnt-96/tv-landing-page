@@ -8,10 +8,12 @@ interface Props {
 const VideoPlayer: FC<Props> = ({ videoCode }) => {
   return (
     <YouTube
+      id="video-customize"
       video={videoCode}
       width="100%"
       height="100%"
       showRelatedVideos={false}
+      modestBranding={false}
     />
   );
 };

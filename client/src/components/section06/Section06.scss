@@ -42,13 +42,12 @@
     }
   }
 
-  &-video {
+  &-video, &-content {
     margin-top: $space-secondary !important;
+  }
+
+  &-video {
     width: 50%;
     height: 300px;
   }
-}
-
-.hide-title {
-  display: none;
 }

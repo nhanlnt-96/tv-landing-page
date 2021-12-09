@@ -7,7 +7,7 @@ export const ContentSectionMobile: FC = () => {
   return (
     <>
       {section05Content.map((val, index) => (
-        <Row className="section05-content-mobile">
+        <Row key={index} className="section05-content-mobile">
           <div className="content-mobile-shape">
             <p>GIAI DOAN {val.step}</p>
           </div>
