@@ -71,8 +71,14 @@
       "section08/*": [
         "components/section08/*"
       ],
+      "section09/*": [
+        "components/section09/*"
+      ],
       "section10/*": [
         "components/section10/*"
+      ],
+      "model/*": [
+        "model/*"
       ]
     }
   }

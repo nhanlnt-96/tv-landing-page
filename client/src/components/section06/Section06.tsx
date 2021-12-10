@@ -1,11 +1,15 @@
 import React, { FC } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import {
+  LearnPronunciation,
+  LearnSkills,
+  LearnWithForeign,
+} from 'section06/components';
+import { IProps } from 'model/props';
 
 import './Section06.scss';
-import { LearnPronunciation, LearnSkills } from 'section06/components';
-import { LearnWithForeign } from 'section06/components/LearnWithForeign';
 
-const Section06: FC = () => {
+const Section06: FC<IProps> = ({ click }) => {
   return (
     <Container fluid className="section-06">
       <Container className="section06-container">
@@ -29,7 +33,7 @@ const Section06: FC = () => {
           <LearnSkills />
         </Row>
         <Row className="section06-btn">
-          <button>NHẬN TƯ VẤN</button>
+          <button onClick={click}>NHẬN TƯ VẤN</button>
         </Row>
       </Container>
     </Container>

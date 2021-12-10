@@ -2,12 +2,9 @@ import React, { FC } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import RegisterForm from 'registerForm/RegisterForm';
 import Header from 'header/Header';
+import { IProps } from 'model/props';
 
 import './Section01.scss';
-
-interface IProps {
-  click: React.MouseEventHandler<HTMLButtonElement>;
-}
 
 const Section01: FC<IProps> = ({ click }) => {
   return (

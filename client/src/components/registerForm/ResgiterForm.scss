@@ -2,6 +2,7 @@
 @import '../../styles/rwd';
 
 .form-items {
+  width: 100%;
   @include flex-center;
   flex-direction: column;
   @include mobile {

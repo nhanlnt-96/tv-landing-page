@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Row } from 'react-bootstrap';
 import StarIcon from '@mui/icons-material/Star';
 import { section04Content } from 'configs/section04Content';
 import Chicken from 'imgs/chicken.png';
+import { IProps } from 'model/props';
 import './Section04.scss';
 
-const Section04 = () => {
+const Section04: FC<IProps> = ({ click }) => {
   return (
     <Row className="section-04">
       <div className="section04-container">
@@ -26,7 +27,7 @@ const Section04 = () => {
           <img src={Chicken} alt="tv-landing-page" />
         </div>
         <div className="section04-btn">
-          <button>NHẬN TƯ VẤN</button>
+          <button onClick={click}>NHẬN TƯ VẤN</button>
         </div>
       </div>
     </Row>

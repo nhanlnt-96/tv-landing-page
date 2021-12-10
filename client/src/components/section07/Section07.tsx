@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { Container, Row } from 'react-bootstrap';
-
-import './Section07.scss';
 import { section07Content } from 'configs/section07Content';
 import VideoPlayer from 'videoPlayer/VideoPlayer';
+
+import './Section07.scss';
 
 const Section07: FC = () => {
   return (

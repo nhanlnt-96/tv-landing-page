@@ -1,8 +1,8 @@
 import React, { FC, useLayoutEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { ContentSection, ContentSectionMobile } from 'section05/components';
 
 import './Section05.scss';
-import { ContentSection, ContentSectionMobile } from 'section05/components';
 
 const useWindowSize = () => {
   const [currentWidth, setCurrentWidth] = useState(0);
