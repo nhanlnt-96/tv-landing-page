@@ -70,6 +70,9 @@
       ],
       "section08/*": [
         "components/section08/*"
+      ],
+      "section10/*": [
+        "components/section10/*"
       ]
     }
   }
