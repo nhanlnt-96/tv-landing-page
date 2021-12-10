@@ -52,13 +52,23 @@ const Section10: FC = () => {
         <Col lg={4} md={4} className="company-social">
           <h6>Chương trình tiếng Anh online chất lượng cao</h6>
           <div className="social-icon">
-            <a href="https://www.facebook.com/Tan-Van-Education-System-388130665159447/">
+            <a
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/Tan-Van-Education-System-388130665159447/"
+            >
               <img src={Facebook} alt="tv-facebook" />
             </a>
-            <a href="https://www.youtube.com/channel/UCh6YOFj4qLxvAXVGlB_MazA/featured">
+            <a
+              rel="noopener noreferrer"
+              href="https://www.youtube.com/channel/UCh6YOFj4qLxvAXVGlB_MazA/featured"
+            >
               <img src={Youtube} alt="tv-youtube" />
             </a>
-            <a href="https://tanvan.lcms.vn/" target="_blank">
+            <a
+              rel="noopener noreferrer"
+              href="https://tanvan.lcms.vn/"
+              target="_blank"
+            >
               <img src={WebLink} alt="tv-web" />
             </a>
           </div>
