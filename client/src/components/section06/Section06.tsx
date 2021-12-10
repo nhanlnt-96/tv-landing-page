@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 
 import './Section06.scss';
 import { LearnPronunciation } from 'section06/components';
+import { LearnWithForeign } from 'section06/components/LearnWithForeign';
 
 const Section06: FC = () => {
   return (
@@ -20,6 +21,9 @@ const Section06: FC = () => {
         </Row>
         <Row className="section06-pronunciation">
           <LearnPronunciation />
+        </Row>
+        <Row className="section06-foreign">
+          <LearnWithForeign />
         </Row>
       </Container>
     </Container>
