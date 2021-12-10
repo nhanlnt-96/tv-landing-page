@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Container, Row } from 'react-bootstrap';
 
 import './Section06.scss';
-import { LearnPronunciation } from 'section06/components';
+import { LearnPronunciation, LearnSkills } from 'section06/components';
 import { LearnWithForeign } from 'section06/components/LearnWithForeign';
 
 const Section06: FC = () => {
@@ -24,6 +24,12 @@ const Section06: FC = () => {
         </Row>
         <Row className="section06-foreign">
           <LearnWithForeign />
+        </Row>
+        <Row className="section06-foreign">
+          <LearnSkills />
+        </Row>
+        <Row className="section06-btn">
+          <button>NHẬN TƯ VẤN</button>
         </Row>
       </Container>
     </Container>

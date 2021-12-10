@@ -19,6 +19,17 @@
   &-pronunciation, &-foreign {
     margin-top: $space-secondary !important;
   }
+
+  &-btn {
+    margin-top: $space-secondary !important;
+    @include flex-center;
+
+    button {
+      @include primary-button;
+      @include pulse-animate-btn;
+      background-color: $secondary-color;
+    }
+  }
 }
 
 .section06-pronunciation .lp {
@@ -208,7 +219,7 @@
 }
 
 .section06-child-title {
-  width: 360px;
+  width: 400px;
   background-color: $primary-color;
   border-radius: 50px;
   height: 40px;
@@ -217,12 +228,18 @@
   @include xsmall {
     width: 100%;
   }
+  @include mobile {
+    width: 100%;
+  }
 
   p {
     color: #ffffff;
     font-size: 2rem;
     font-weight: bold;
     @include xsmall {
+      font-size: 1.6rem;
+    }
+    @include mobile {
       font-size: 1.6rem;
     }
   }
