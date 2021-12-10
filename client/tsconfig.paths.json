@@ -64,6 +64,9 @@
       ],
       "videoPlayer/*": [
         "components/videoPlayer/*"
+      ],
+      "section07/*": [
+        "components/section07/*"
       ]
     }
   }

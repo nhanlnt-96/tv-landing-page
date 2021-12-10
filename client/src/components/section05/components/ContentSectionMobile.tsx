@@ -9,7 +9,7 @@ export const ContentSectionMobile: FC = () => {
       {section05Content.map((val, index) => (
         <Row key={index} className="section05-content-mobile">
           <div className="content-mobile-shape">
-            <p>GIAI DOAN {val.step}</p>
+            <p>GIAI ĐOẠN {val.step}</p>
           </div>
           <div className="content-mobile-line" />
           <div className="content-mobile-main">
