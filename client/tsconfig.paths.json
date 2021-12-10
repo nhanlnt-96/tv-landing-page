@@ -49,6 +49,36 @@
       ],
       "section03/*": [
         "components/section03/*"
+      ],
+      "section04/*": [
+        "components/section04/*"
+      ],
+      "section05/*": [
+        "components/section05/*"
+      ],
+      "section06/*": [
+        "components/section06/*"
+      ],
+      "node_modules/*": [
+        "../node_modules/*"
+      ],
+      "videoPlayer/*": [
+        "components/videoPlayer/*"
+      ],
+      "section07/*": [
+        "components/section07/*"
+      ],
+      "section08/*": [
+        "components/section08/*"
+      ],
+      "section09/*": [
+        "components/section09/*"
+      ],
+      "section10/*": [
+        "components/section10/*"
+      ],
+      "model/*": [
+        "model/*"
       ]
     }
   }

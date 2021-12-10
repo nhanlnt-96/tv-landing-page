@@ -3,8 +3,9 @@ import { Container, Row } from 'react-bootstrap';
 import { Diagram } from 'section02/components';
 
 import './Section02.scss';
+import { IProps } from 'model/props';
 
-const Section02: FC = () => {
+const Section02: FC<IProps> = ({ click }) => {
   return (
     <Container className="section-02">
       <Row className="section02-title">
@@ -26,7 +27,7 @@ const Section02: FC = () => {
         </p>
       </Row>
       <Row className="section02-register-btn">
-        <button>NHẬN TƯ VẤN</button>
+        <button onClick={click}>NHẬN TƯ VẤN</button>
       </Row>
     </Container>
   );

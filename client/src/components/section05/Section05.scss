@@ -1,0 +1,252 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.section-05 {
+  height: 600px;
+  @include flex-center;
+  @include tablet {
+    height: 500px;
+  }
+  @include mobile {
+    display: unset;
+  }
+}
+
+.section05 {
+  &-container {
+    width: 960px;
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &-title {
+    height: 40px;
+    text-align: center;
+    @include flex-center;
+    @include mobile {
+      height: unset;
+    }
+
+    h6 {
+      color: $primary-color;
+      @include primary-text-size;
+      @include tablet {
+        font-size: 2.6rem;
+      }
+      @include mobile {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  &-content {
+    margin-top: $space-secondary !important;
+    height: calc(600px - 40px - 24px);
+    @include tablet {
+      height: calc(500px - 40px - 24px);
+    }
+    @include mobile {
+      display: none !important;
+    }
+
+    .content-item {
+      @include flex-center;
+      flex-direction: column;
+      position: relative;
+
+      .img-item, .content {
+        width: 100%;
+      }
+
+      .img-item {
+        flex: 2;
+        background: url("../../assets/imgs/tree.png") no-repeat bottom center;
+        position: relative;
+
+        .img-content {
+          width: 50%;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+
+          p {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            @include flex-center;
+            flex-direction: column;
+            color: $primary-color;
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        .img-item {
+          background-size: 75%;
+
+          .img-content {
+            transform: translate(-45%, 0);
+            @include tablet {
+              transform: translate(-45%, 15%);
+              p {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .img-item {
+          background-size: 85%;
+
+          .img-content {
+            transform: translate(-45%, -65%);
+            @include desktop {
+              transform: translate(-45%, -45%);
+            }
+            @include tablet {
+              transform: translate(-45%, -20%);
+            }
+
+            p {
+              font-size: 1.6rem;
+              @include tablet {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+
+        .content .icon-item {
+          svg {
+            font-size: 4rem;
+          }
+
+          @include tablet {
+            left: -5%;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .img-item {
+          background-size: 95%;
+
+          .img-content {
+            transform: translate(-45%, -60%);
+            @include tablet {
+              transform: translate(-45%, -40%);
+            }
+
+            p {
+              font-size: 1.9rem;
+              @include tablet {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+
+        .content .icon-item {
+          svg {
+            font-size: 6rem;
+          }
+
+          @include tablet {
+            left: -10%;
+            svg {
+              font-size: 5rem;
+            }
+          }
+        }
+      }
+
+      .content {
+        width: 200px;
+        flex: 1;
+        background-color: $primary-color;
+        border-radius: 10px;
+        padding: 10px;
+        @include flex-center;
+
+        .icon-item {
+          position: absolute;
+          left: 0;
+
+          svg {
+            font-weight: bold;
+            color: $secondary-color;
+          }
+        }
+
+        p {
+          font-size: 1.4rem;
+          color: #ffffff;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+
+.section05-content-mobile {
+  margin-top: $space-secondary !important;
+  @include flex-center;
+  flex-direction: column;
+
+  .content-mobile {
+    &-shape {
+      width: 230px;
+      height: 75px;
+      background-color: $primary-color;
+      clip-path: ellipse(50% 50% at 50% 50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+
+      p {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+
+    &-line {
+      width: 0;
+      height: 40px;
+      border: none;
+      border-left: 3px solid $primary-color;
+      padding: 0;
+    }
+
+    &-main {
+      background-color: $secondary-color;
+      padding: 10px;
+      border-radius: 10px;
+      width: 95%;
+
+      p {
+        font-weight: bold;
+        @include flex-center;
+        justify-content: unset;
+        font-size: 1.7rem;
+
+        svg {
+          color: #ffffff;
+          font-size: 3rem;
+          margin-right: 5px;
+        }
+      }
+
+      .sub-main {
+        text-align: center;
+
+        span {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.section-10 {
+  background: url("../../assets/imgs/bg4.png") no-repeat bottom center;
+  background-size: cover;
+  padding: 20px 50px !important;
+  @include mobile {
+    padding: 10px !important;
+  }
+}
+
+.section10 {
+  &-content {
+    .company-info {
+      h6 {
+        font-weight: bold;
+        font-size: 1.6rem;
+      }
+
+      p, b {
+        font-size: 1.3rem;
+      }
+
+      .company-address {
+        .address-item {
+          @include flex-center;
+          justify-content: unset;
+          flex-direction: row;
+          @include mobile {
+            flex-wrap: wrap;
+          }
+
+          @include tablet {
+            flex-wrap: wrap;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
+          .title, .phone {
+            flex: 1;
+          }
+
+          .address {
+            flex: 2;
+          }
+
+          @include mobile {
+            .phone {
+              width: 100%;
+              flex: unset;
+            }
+          }
+
+          @include tablet {
+            .phone {
+              width: 100%;
+              flex: unset;
+            }
+          }
+        }
+      }
+
+      .company-address, .company-email, .company-website, .company-hotline, img {
+        margin-top: 12px;
+      }
+
+      img {
+        width: 10%;
+      }
+
+      @include mobile {
+        order: 2;
+        margin-top: $space-secondary;
+      }
+    }
+
+    .company-social {
+      text-align: center;
+
+      h6 {
+        font-weight: bold;
+        font-size: 1.6rem;
+        @include mobile {
+          font-size: 1.5rem;
+        }
+      }
+
+      .social-icon {
+        margin-top: 24px;
+        width: 100%;
+        @include flex-center;
+        justify-content: space-around;
+
+        img {
+          cursor: pointer;
+          @include tablet{
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  &-logo {
+    @include flex-center;
+
+    img {
+      width: 10%;
+      @include mobile {
+        width: 30%;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.section07 {
+  &-title {
+    text-align: center;
+
+    p {
+      @include primary-text-size;
+      @include mobile {
+        font-size: 2.1rem;
+      }
+    }
+
+    span {
+      font-size: 1.9rem;
+      @include mobile {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &-content {
+    margin-top: $space-secondary !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .content-item {
+      width: 30%;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #E0E0E0;
+      @include mobile {
+        width: 80%;
+        &:not(:last-child) {
+          margin-bottom: $space-secondary;
+        }
+      }
+      @include tablet {
+        width: 32%;
+      }
+
+      .content-description {
+        text-align: center;
+        padding: 0 10px;
+
+        h6 {
+          margin-top: 6px;
+          font-weight: bold;
+          font-size: 1.5rem;
+          color: rgb(0, 150, 136)
+        }
+
+        p {
+          margin-top: 12px;
+          font-size: 1.4rem;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
