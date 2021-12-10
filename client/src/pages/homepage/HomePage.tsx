@@ -6,6 +6,7 @@ import Section04 from 'section04/Section04';
 import Section05 from 'section05/Section05';
 import Section06 from 'section06/Section06';
 import Section07 from 'section07/Section07';
+import Section08 from 'section08/Section08';
 import { Container } from 'react-bootstrap';
 import './HomePage.scss';
 
@@ -36,6 +37,9 @@ const HomePage: FC = () => {
       </div>
       <div className="space-top">
         <Section07 />
+      </div>
+      <div className="space-top">
+        <Section08 />
       </div>
     </Container>
   );

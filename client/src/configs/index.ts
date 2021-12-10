@@ -4,4 +4,6 @@ export * from './diagramContent';
 export * from './section03Content';
 export * from './section04Content';
 export * from './section05Content';
+export * from './section07Content';
+export * from './section08Content';
 export * from './videoUrl';
