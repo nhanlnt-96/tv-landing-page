@@ -23,8 +23,8 @@
       "configs/*": [
         "configs/*"
       ],
-      "shared/*": [
-        "shared/*"
+      "regex/*": [
+        "shared/regex/*"
       ],
       "models/*": [
         "models/*"
@@ -79,6 +79,9 @@
       ],
       "model/*": [
         "model/*"
+      ],
+      "helpers/*": [
+        "shared/helpers/*"
       ]
     }
   }

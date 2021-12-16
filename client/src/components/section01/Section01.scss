@@ -2,18 +2,23 @@
 @import '../../styles/rwd';
 
 .section-01 {
-  background: url("../../assets/imgs/bg3.png") no-repeat center;
+  background: url('../../assets/imgs/bg3.png') no-repeat center;
   background-size: cover;
   height: 800px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
   @include mobile {
     height: 850px;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
   }
 
+  .header-section {
+    height: 120px;
+  }
 
   .section01-main-content {
-    height: calc(800px - 130px);
+    height: calc(800px - 120px);
+    width: 960px;
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin-top: 12px;
@@ -62,7 +67,6 @@
   }
 
   .section01-main-content .register-form {
-    width: 70%;
     min-height: 295px;
     border: 4px dashed $secondary-color;
     border-radius: 25px;

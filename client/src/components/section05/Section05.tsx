@@ -1,21 +1,9 @@
-import React, { FC, useLayoutEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { ContentSection, ContentSectionMobile } from 'section05/components';
+import { useWindowSize } from 'helpers/useWindowSize';
 
 import './Section05.scss';
-
-const useWindowSize = () => {
-  const [currentWidth, setCurrentWidth] = useState(0);
-  useLayoutEffect(() => {
-    const updateSize = () => {
-      setCurrentWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return currentWidth;
-};
 
 const Section05: FC = () => {
   const currentWidth = useWindowSize();

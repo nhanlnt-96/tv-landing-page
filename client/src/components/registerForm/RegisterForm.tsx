@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 import { classes } from 'configs/classes';
-import { nameRegex, phoneRegex } from 'shared/regex';
+import { nameRegex, phoneRegex } from 'regex/regex';
 import { IUser } from 'models/users';
 import { appendSpreadsheet } from 'boot/googleSpreadsheet';
 import './ResgiterForm.scss';

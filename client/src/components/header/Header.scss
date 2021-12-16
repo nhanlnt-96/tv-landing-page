@@ -2,56 +2,81 @@
 @import '../../styles/rwd';
 
 .header {
-  padding: 10px 0;
-  height: 130px;
+  height: 100%;
   @include mobile {
     display: flex;
     padding: 0 !important;
   }
 
-  .logo {
+  .header-container {
+    padding: 10px 0;
+    @include flex-center;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1;
     @include mobile {
-      order: 2;
-      margin-top: 5px;
+      padding: 0;
+      flex-direction: column;
+      position: unset;
     }
 
-    .logo-content {
-      width: 100px;
-      height: 100px;
+    .logo {
       @include mobile {
-        width: 70px;
-        height: 70px;
+        order: 2;
+        margin-top: 5px;
       }
 
-      img {
+      .logo-content {
+        width: 100px;
+        height: 100px;
+        @include mobile {
+          width: 70px;
+          height: 70px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .hotline {
+      @include mobile {
+        height: 40px;
         width: 100%;
-        height: 100%;
+        order: 1;
+        svg,
+        a {
+          color: #ffffff !important;
+        }
       }
-    }
-  }
 
-  .hotline {
-    @include mobile {
-      order: 1;
-      background-color: $primary-color;
-      svg, a {
-        color: #ffffff !important;
+      .hotline-container {
+        @include flex-center;
+        @include mobile {
+          background-color: $primary-color !important;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
+
+        .phone-icon {
+          -webkit-animation-name: pulse;
+          -webkit-animation-delay: 1s;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-iteration-count: infinite;
+        }
+
+        a {
+          color: $primary-color;
+          text-decoration: none;
+          font-size: 2.5rem;
+          font-weight: 600;
+          margin-left: 5px;
+        }
       }
-    }
-
-    .phone-icon {
-      -webkit-animation-name: pulse;
-      -webkit-animation-delay: 1s;
-      -webkit-animation-duration: 1s;
-      -webkit-animation-iteration-count: infinite;
-    }
-
-    a {
-      color: $primary-color;
-      text-decoration: none;
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-left: 5px;
     }
   }
 }

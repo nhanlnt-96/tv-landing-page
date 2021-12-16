@@ -9,7 +9,9 @@ import './Section01.scss';
 const Section01: FC<IProps> = ({ click }) => {
   return (
     <Container fluid className="section-01">
-      <Header />
+      <div className="header-section">
+        <Header />
+      </div>
       <Row>
         <Container fluid className="section01-main-content">
           <Row className="title">
