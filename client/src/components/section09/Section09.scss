@@ -1,5 +1,12 @@
-@import "../../styles/variables";
-@import "../../styles/rwd";
+@import '../../styles/variables';
+@import '../../styles/rwd';
+
+.section-09 {
+  padding-top: 120px;
+  @include mobile {
+    padding-top: 40px;
+  }
+}
 
 .section09 {
   &-title {
@@ -30,7 +37,7 @@
       .form-title {
         margin-bottom: 12px;
         font-size: 2.1rem;
-        @include xsmall{
+        @include xsmall {
           font-size: 1.8rem;
         }
       }

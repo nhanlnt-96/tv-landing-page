@@ -27,7 +27,7 @@ const HomePage: FC = () => {
   return (
     <Container className="homepage-container" fluid>
       <Section01 click={onMoveToSection02BtnClick} />
-      <div ref={section02Ref} className="section02-ref space-top">
+      <div ref={section02Ref}>
         <Section02 click={onMoveToSection09BtnClick} />
       </div>
       <div className="space-top">

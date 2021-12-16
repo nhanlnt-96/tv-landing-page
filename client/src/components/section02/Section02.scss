@@ -1,8 +1,12 @@
-@import "../../styles/variables";
-@import "../../styles/rwd";
+@import '../../styles/variables';
+@import '../../styles/rwd';
 
 .section-02 {
   scroll-behavior: smooth;
+  padding-top: 120px;
+  @include mobile {
+    padding-top: 40px;
+  }
 }
 
 .section-02 .section02-title {
@@ -89,7 +93,8 @@
   text-align: justify;
   margin-top: $space-secondary !important;
 
-  p, b {
+  p,
+  b {
     font-size: 1.8rem;
   }
 }

@@ -17,11 +17,11 @@ const Header: FC = () => {
   return (
     <Row className="header">
       <div
-        className="header-container"
-        style={{
-          backgroundColor:
-            offsetY !== 0 && currentWidth >= 768 ? '#ffffff' : '',
-        }}
+        className={`header-container ${
+          offsetY !== 0 && currentWidth >= 768
+            ? 'fixed-header'
+            : 'unfixed-header'
+        }`}
       >
         <Col
           lg={6}
