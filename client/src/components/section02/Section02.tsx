@@ -13,7 +13,7 @@ const Section02: FC<IProps> = ({ click }) => {
       </Row>
       <Diagram />
       <Row className="section02-register-btn">
-        <button onClick={click}>NHẬN TƯ VẤN</button>
+        <button onClick={click}>ĐĂNG KÝ NGAY</button>
       </Row>
     </Container>
   );

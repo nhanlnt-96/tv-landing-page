@@ -26,7 +26,7 @@ const Section06: FC<IProps> = ({ click }) => {
           <LearnSkills />
         </Row>
         <Row className="section06-btn">
-          <button onClick={click}>NHẬN TƯ VẤN</button>
+          <button onClick={click}>ĐĂNG KÝ NGAY</button>
         </Row>
       </Container>
     </Container>

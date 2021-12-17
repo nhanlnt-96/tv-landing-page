@@ -7,8 +7,9 @@ import Section05 from 'section05/Section05';
 import Section06 from 'section06/Section06';
 import Section07 from 'section07/Section07';
 import Section08 from 'section08/Section08';
-import Section10 from 'section10/Section10';
 import Section09 from 'section09/Section09';
+import Section10 from 'section10/Section10';
+import Section11 from '../../components/section11/Section11';
 import { Container } from 'react-bootstrap';
 import './HomePage.scss';
 
@@ -41,6 +42,9 @@ const HomePage: FC = () => {
       </div>
       <div className="space-top">
         <Section06 click={onMoveToSection09BtnClick} />
+      </div>
+      <div className="space-top">
+        <Section11 click={onMoveToSection09BtnClick} />
       </div>
       <div className="space-top">
         <Section07 />

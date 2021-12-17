@@ -43,7 +43,7 @@ const Section04: FC<IProps> = ({ click }) => {
           </Row>
         </div>
         <div className="section04-btn">
-          <button onClick={click}>NHẬN TƯ VẤN</button>
+          <button onClick={click}>ĐĂNG KÝ NGAY</button>
         </div>
       </div>
     </Row>

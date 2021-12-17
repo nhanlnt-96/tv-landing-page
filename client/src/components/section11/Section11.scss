@@ -1,0 +1,156 @@
+@import '../../styles/variables';
+@import '../../styles/rwd';
+
+.section11 {
+  &-title {
+    text-align: center;
+
+    p {
+      @include primary-text-size;
+      @include mobile {
+        font-size: 2.1rem;
+      }
+    }
+  }
+
+  &-content .lp {
+    &-container {
+      @include flex-center;
+      flex-direction: column;
+    }
+
+    &-video {
+      width: 60%;
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    &-content {
+      width: 100%;
+      @include flex-center;
+      flex-direction: row;
+      @include mobile {
+        height: 370px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        position: relative;
+      }
+
+      .content-item {
+        height: 150px;
+        @include flex-center;
+        text-align: center;
+
+        &:nth-child(odd) {
+          width: 300px;
+          border: 2px dashed $primary-color;
+          border-radius: 10px;
+          padding: 10px;
+          @include mobile {
+            width: 145px;
+          }
+          @include small {
+            width: 165px;
+          }
+          @include xsmall {
+            width: 120px;
+          }
+
+          p {
+            color: #000000;
+            font-size: 1.5rem;
+            font-weight: bold;
+            @include tablet {
+              font-size: 1.3rem;
+            }
+            @include mobile {
+              font-size: 1.3rem;
+            }
+            @include xsmall {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          width: fit-content;
+          padding: 10px;
+          @include tablet {
+            padding: 0;
+          }
+          @include mobile {
+            padding: 0;
+            position: absolute;
+          }
+
+          svg {
+            font-size: 4rem;
+            color: $primary-color;
+            @include tablet {
+              font-size: 3rem;
+            }
+          }
+        }
+
+        @include small {
+          &:nth-child(4) {
+            width: 165px !important;
+            right: 0;
+
+            svg {
+              transform: rotate(90deg);
+            }
+          }
+        }
+
+        @include xsmall {
+          &:nth-child(4) {
+            width: 120px !important;
+            right: 0;
+
+            svg {
+              transform: rotate(90deg);
+            }
+          }
+        }
+
+        @include mobile {
+          &:nth-child(2) {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          &:nth-child(4) {
+            width: 145px;
+            right: 0;
+
+            svg {
+              transform: rotate(90deg);
+            }
+          }
+          &:nth-child(5) {
+            order: 6;
+          }
+          &:nth-child(6) {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &-btn {
+    margin-top: $space-secondary !important;
+    @include flex-center;
+
+    button {
+      @include primary-button;
+      @include pulse-animate-btn;
+      background-color: $primary-color;
+    }
+  }
+}
