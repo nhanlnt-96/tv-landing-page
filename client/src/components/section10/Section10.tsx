@@ -76,6 +76,10 @@ const Section10: FC = () => {
       </Row>
       <Row className="section10-logo">
         <img src={Logo} alt="tv-logo" />
+        <p>
+          Chương trình Làm quen Tiếng Anh Màm non Tân Văn E-Learning– Giải pháp
+          giúp con học Tiếng Anh tại nhà, mọi lúc và mọi nơi.
+        </p>
       </Row>
     </Container>
   );

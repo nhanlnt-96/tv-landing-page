@@ -1,8 +1,8 @@
-@import "../../styles/variables";
-@import "../../styles/rwd";
+@import '../../styles/variables';
+@import '../../styles/rwd';
 
 .section-10 {
-  background: url("../../assets/imgs/bg4.png") no-repeat bottom center;
+  background: url('../../assets/imgs/bg4.png') no-repeat bottom center;
   background-size: cover;
   padding: 20px 50px !important;
   @include mobile {
@@ -18,7 +18,8 @@
         font-size: 1.6rem;
       }
 
-      p, b {
+      p,
+      b {
         font-size: 1.3rem;
       }
 
@@ -39,7 +40,8 @@
             margin-bottom: 10px;
           }
 
-          .title, .phone {
+          .title,
+          .phone {
             flex: 1;
           }
 
@@ -63,7 +65,11 @@
         }
       }
 
-      .company-address, .company-email, .company-website, .company-hotline, img {
+      .company-address,
+      .company-email,
+      .company-website,
+      .company-hotline,
+      img {
         margin-top: 12px;
       }
 
@@ -96,7 +102,7 @@
 
         img {
           cursor: pointer;
-          @include tablet{
+          @include tablet {
             width: 50px;
           }
         }
@@ -106,6 +112,14 @@
 
   &-logo {
     @include flex-center;
+    flex-direction: column;
+    text-align: center;
+
+    p {
+      font-weight: bold;
+      margin-top: 15px;
+      font-size: 1.4rem;
+    }
 
     img {
       width: 10%;
