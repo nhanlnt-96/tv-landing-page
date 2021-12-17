@@ -12,6 +12,7 @@ const RegisterForm: FC = () => {
     fullName: '',
     phoneNumber: '',
     classes: '',
+    school: '',
   };
   const [formInput, setFormInput] = useState<IUser>(initialInput);
   const [errors, setErrors] = useState<any>({});
@@ -50,11 +51,12 @@ const RegisterForm: FC = () => {
       setErrors(newErrors);
       setIsLoading(false);
     } else {
-      const { fullName, phoneNumber, classes } = formInput;
+      const { fullName, phoneNumber, classes, school } = formInput;
       const res = await appendSpreadsheet({
         fullName,
         phoneNumber,
         classes,
+        school,
         status: 'Chưa liên hệ',
       });
       if (res?._rawData) {
@@ -111,8 +113,20 @@ const RegisterForm: FC = () => {
           {errors.classes}
         </Form.Control.Feedback>
       </Form.Group>
-      <span>Chuyên viên Tân Văn sẽ gọi điện hỗ trợ</span>
-      <span>Quý khách đăng ký!</span>
+      <Form.Group className="mb-3 item">
+        <Form.Control
+          type="text"
+          name="school"
+          placeholder="Trường Mầm non của bé"
+          onChange={(e) => onGetInputHandler('school', e.target.value)}
+          isInvalid={!!errors.phoneNumber}
+        />
+        <Form.Control.Feedback type="invalid">
+          {errors.phoneNumber}
+        </Form.Control.Feedback>
+      </Form.Group>
+      <span>Bộ phận Giáo vụ Tân Văn sẽ gọi điện hỗ trợ</span>
+      <span>Quý phụ huynh đăng ký!</span>
       <Button
         className="mt-3"
         onClick={onRegisterBtnClick}
@@ -120,6 +134,7 @@ const RegisterForm: FC = () => {
           (!formInput.fullName ||
             !formInput.phoneNumber ||
             !formInput.classes ||
+            !formInput.school ||
             isLoading) &&
           true
         }

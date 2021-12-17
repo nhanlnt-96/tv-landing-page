@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/rwd';
 
 .homepage-container {
   padding-right: 0 !important;
@@ -14,17 +15,20 @@
   .space-top {
     margin-top: $space-primary !important;
   }
-}
 
-.fixed-header {
-  background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  -webkit-transition: background-color 1000ms linear;
-  transition: background-color 1000ms linear;
-}
-
-.unfixed-header {
-  background-color: unset;
-  -webkit-transition: background-color 1000ms linear;
-  transition: background-color 1000ms linear;
+  .section {
+    &-02,
+    &-03,
+    &-04,
+    &-05,
+    &-06,
+    &-07,
+    &-08,
+    &-09 {
+      padding-top: 120px;
+      @include mobile {
+        padding-top: 40px;
+      }
+    }
+  }
 }
