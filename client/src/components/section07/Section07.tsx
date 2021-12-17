@@ -9,7 +9,7 @@ const Section07: FC = () => {
   return (
     <Container className="section-07">
       <Row className="section07-title">
-        <p>PHỤ HUYNH NÓI GÌ VỀ EDUPIA KID</p>
+        <p>PHỤ HUYNH NÓI GÌ VỀ TAN VAN E-LEARNING</p>
         <span>
           MC Hoàng Linh, Nhà báo Chánh Văn và hàng nghìn ba mẹ thông thái đã tin
           tưởng lựa chọn Edupia cho con, còn bạn thì sao?

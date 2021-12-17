@@ -1,5 +1,5 @@
-@import "../../styles/variables";
-@import "../../styles/rwd";
+@import '../../styles/variables';
+@import '../../styles/rwd';
 
 .section08 {
   &-container {
@@ -18,7 +18,8 @@
     }
   }
 
-  &-img, &-content {
+  &-img,
+  &-content {
     margin-top: $space-secondary !important;
   }
 

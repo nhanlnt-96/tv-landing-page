@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import {
-  LearnPronunciation,
+  // LearnPronunciation,
   LearnSkills,
   LearnWithForeign,
 } from 'section06/components';
