@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { Diagram } from 'section02/components';
+import { IProps } from 'model/props';
 
 import './Section02.scss';
-import { IProps } from 'model/props';
 
 const Section02: FC<IProps> = ({ click }) => {
   return (

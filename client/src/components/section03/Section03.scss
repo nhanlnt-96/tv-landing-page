@@ -1,5 +1,5 @@
-@import "../../styles/variables";
-@import "../../styles/rwd";
+@import '../../styles/variables';
+@import '../../styles/rwd';
 
 .section-03 {
   @include flex-center;
@@ -38,7 +38,8 @@
   &-title {
     text-align: center;
 
-    h6, span {
+    h6,
+    span {
       @include primary-text-size;
       @include mobile {
         font-size: 2rem;
@@ -47,8 +48,25 @@
   }
 
   &-img {
-    img {
-      width: 100%;
+    @include flex-center;
+    @include mobile {
+      display: none;
     }
+
+    img {
+      width: 70%;
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.section03-register-btn {
+  margin-top: $space-secondary !important;
+  @include flex-center;
+
+  button {
+    @include primary-button;
+    @include pulse-animate-btn;
+    background-color: $primary-color;
   }
 }

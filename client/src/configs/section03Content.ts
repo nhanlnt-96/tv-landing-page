@@ -4,12 +4,15 @@ interface ISection03Content {
 
 export const section03Content: ISection03Content[] = [
   {
-    content: '90% tự tin phát âm chính xác từng âm tiết',
+    content: 'Giáo viên giảng dạy hấp dẫn và bài giảng sinh động',
   },
   {
-    content: '87% bé tự tin giao tiếp trong vòng 03 tháng',
+    content: 'Nhân vật hoạt hình khủng long Uri tinh nghịch, dễ thương',
   },
   {
-    content: '95% tự tin phản xạ giao tiếp tự nhiên như người bản ngữ',
+    content: 'Bài tập dạng game phong phú, hấp dẫn',
+  },
+  {
+    content: 'Hoạt động ngoại khóa: Chuyên đề Mỹ thuật và Kỹ năng sống Mầm non',
   },
 ];

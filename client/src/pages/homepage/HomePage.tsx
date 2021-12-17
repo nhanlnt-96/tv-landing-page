@@ -30,8 +30,8 @@ const HomePage: FC = () => {
       <div ref={section02Ref} className="space-top section02-bg">
         <Section02 click={onMoveToSection09BtnClick} />
       </div>
-      <div className="space-top">
-        <Section03 />
+      <div className="space-top section03-bg">
+        <Section03 click={onMoveToSection09BtnClick} />
       </div>
       <div className="space-top">
         <Section04 click={onMoveToSection09BtnClick} />
