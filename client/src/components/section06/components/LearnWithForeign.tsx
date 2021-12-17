@@ -7,7 +7,7 @@ export const LearnWithForeign: FC = () => {
   return (
     <div className="lwf-container">
       <div className="section06-child-title">
-        <p>2. Học cùng giáo viên bản ngữ</p>
+        <p>Bước 1</p>
       </div>
       <div className="lwf-content section06-child-content">
         <div className="lwf-video">
@@ -15,14 +15,14 @@ export const LearnWithForeign: FC = () => {
         </div>
         <div className="lwf-description">
           <div className="description-container">
-            <div className="description-title">
-              <h6>Học cùng giáo viên bản ngữ sẽ giúp con</h6>
-            </div>
+            {/*<div className="description-title">*/}
+            {/*  <h6>Học cùng giáo viên bản ngữ sẽ giúp con</h6>*/}
+            {/*</div>*/}
             <p>
-              Thầy cô giáo sẽ trình bày, dẫn dắt các bạn học sinh hiểu được từ
-              vựng/mẫu câu mới qua các câu chuyện có gắn ngữ cảnh sử dụng. Sau
-              đó, giáo viên sẽ đưa ra các ví dụ và khuyến khích các bạn học sinh
-              nói theo. Điều này giúp các em phát âm chuẩn ngay từ đầu.
+              Con sử dụng điện thoại, máy tính bảng, laptop, máy vi tính,… mở
+              bài học video do Giáo viên Việt Nam và Giáo viên Nước ngoài giảng
+              dạy với những tình huống và hội thoại. Con xem và nhận biết từ
+              vựng và mẫu câu theo chủ đề
             </p>
           </div>
         </div>
