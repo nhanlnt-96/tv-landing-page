@@ -36,7 +36,7 @@ const HomePage: FC = () => {
       <div className="space-top">
         <Section04 click={onMoveToSection09BtnClick} />
       </div>
-      <div className="space-top">
+      <div className="space-top section05-bg">
         <Section05 />
       </div>
       <div className="space-top">

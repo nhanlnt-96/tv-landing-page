@@ -38,7 +38,7 @@ const Section04: FC<IProps> = ({ click }) => {
               ))}
             </Col>
             <Col lg={5} md={6} xs={12} className="img">
-              <img src={imgSelect} alt="shdfhkdhk" />
+              <img src={imgSelect} alt="tan-van-e-learning" />
             </Col>
           </Row>
         </div>

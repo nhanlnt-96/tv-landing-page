@@ -1,19 +1,52 @@
 import React, { FC } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import { ContentSection, ContentSectionMobile } from 'section05/components';
-import { useWindowSize } from 'helpers/useWindowSize';
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
+import { section05Content } from 'configs/section05Content';
+import StarsIcon from '@mui/icons-material/Stars';
 
+import 'react-vertical-timeline-component/style.min.css';
 import './Section05.scss';
 
 const Section05: FC = () => {
-  const currentWidth = useWindowSize();
   return (
     <Container className="section-05">
       <div className="section05-container">
         <Row className="section05-title">
-          <h6>LỘ TRÌNH HỌC TOÀN DIỆN TỪ CƠ BẢN ĐẾN NÂNG CAO </h6>
+          <h6>LỘ TRÌNH HỌC TOÀN DIỆN TỪ CƠ BẢN ĐẾN NÂNG CAO</h6>
         </Row>
-        {currentWidth > 480 ? <ContentSection /> : <ContentSectionMobile />}
+        <Row className="section05-content">
+          <VerticalTimeline className="vertical-timeline--customer">
+            {section05Content.map((val, index) => (
+              <VerticalTimelineElement
+                key={index}
+                className="vertical-timeline-element--work"
+                contentStyle={{
+                  background: '#2B2A8F',
+                  color: '#fff',
+                  borderRadius: '10px',
+                }}
+                contentArrowStyle={{
+                  borderRight: '7px solid #2B2A8F',
+                }}
+                icon={val.icon}
+                iconStyle={{ background: '#2B2A8F', color: '#fff' }}
+              >
+                <h3 className="vertical-timeline-element-title">{val.title}</h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                  {val.subtitle}
+                </h4>
+                <p>{val.description}</p>
+              </VerticalTimelineElement>
+            ))}
+            <VerticalTimelineElement
+              icon={<StarsIcon />}
+              iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+            />
+          </VerticalTimeline>
+        </Row>
       </div>
     </Container>
   );

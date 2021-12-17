@@ -1,13 +1,6 @@
 @import '../../styles/variables';
 @import '../../styles/rwd';
 
-.section-09 {
-  padding-top: 120px;
-  @include mobile {
-    padding-top: 40px;
-  }
-}
-
 .section09 {
   &-title {
     text-align: center;
@@ -28,7 +21,7 @@
 
     .form-container {
       border-radius: 10px;
-      border: 2px solid $secondary-color;
+      border: 2px solid $primary-color;
       width: 400px;
       height: 400px;
       @include flex-center;
