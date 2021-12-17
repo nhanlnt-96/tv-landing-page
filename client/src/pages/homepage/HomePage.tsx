@@ -7,8 +7,9 @@ import Section05 from 'section05/Section05';
 import Section06 from 'section06/Section06';
 import Section07 from 'section07/Section07';
 import Section08 from 'section08/Section08';
-import Section10 from 'section10/Section10';
 import Section09 from 'section09/Section09';
+import Section10 from 'section10/Section10';
+import Section11 from '../../components/section11/Section11';
 import { Container } from 'react-bootstrap';
 import './HomePage.scss';
 
@@ -27,20 +28,23 @@ const HomePage: FC = () => {
   return (
     <Container className="homepage-container" fluid>
       <Section01 click={onMoveToSection02BtnClick} />
-      <div ref={section02Ref} className="section02-ref space-top">
+      <div ref={section02Ref} className="space-top section02-bg">
         <Section02 click={onMoveToSection09BtnClick} />
       </div>
-      <div className="space-top">
-        <Section03 />
+      <div className="space-top section03-bg">
+        <Section03 click={onMoveToSection09BtnClick} />
       </div>
       <div className="space-top">
         <Section04 click={onMoveToSection09BtnClick} />
       </div>
-      <div className="space-top">
+      <div className="space-top section05-bg">
         <Section05 />
       </div>
       <div className="space-top">
         <Section06 click={onMoveToSection09BtnClick} />
+      </div>
+      <div className="space-top">
+        <Section11 click={onMoveToSection09BtnClick} />
       </div>
       <div className="space-top">
         <Section07 />

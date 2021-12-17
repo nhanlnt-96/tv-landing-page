@@ -2,18 +2,23 @@
 @import '../../styles/rwd';
 
 .section-01 {
-  background: url("../../assets/imgs/bg3.png") no-repeat center;
+  background: url('../../assets/imgs/bg3.png') no-repeat center;
   background-size: cover;
   height: 800px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
   @include mobile {
     height: 850px;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
   }
 
+  .header-section {
+    height: 120px;
+  }
 
   .section01-main-content {
-    height: calc(800px - 130px);
+    height: calc(800px - 120px);
+    width: 960px;
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin-top: 12px;
@@ -27,21 +32,36 @@
 
   .section01-main-content .title {
     @include flex-center;
+    flex-direction: column;
+    text-align: center;
 
-    h1 {
-      font-weight: 700;
-      font-family: 'Signika Negative', sans-serif;
-      font-size: 8rem;
-      text-align: center;
-      color: #ffffff;
-      @include tablet {
-        font-size: 7rem;
-      }
+    &-header,
+    &-main {
+      margin-bottom: 15px;
       @include mobile {
-        font-size: 4rem;
+        margin-bottom: 10px;
       }
-      @include xsmall {
-        font-size: 3rem;
+    }
+
+    &-header {
+      width: auto;
+      background-color: $primary-color;
+      color: #ffffff;
+      padding: 5px;
+      @include mobile {
+        h2 {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &-main {
+      h1 {
+        font-weight: bold;
+        font-size: 4rem;
+        @include mobile {
+          font-size: 2rem;
+        }
       }
     }
   }
@@ -62,9 +82,8 @@
   }
 
   .section01-main-content .register-form {
-    width: 70%;
     min-height: 295px;
-    border: 4px dashed $secondary-color;
+    border: 4px dashed $primary-color;
     border-radius: 25px;
     background-color: rgb(189, 242, 250);
     padding: 10px 0;
@@ -106,7 +125,7 @@
     }
 
     .border-left-line {
-      border-left: 2px solid $secondary-color;
+      border-left: 2px solid $primary-color;
       @include mobile {
         margin-top: 20px;
         border-left: unset;

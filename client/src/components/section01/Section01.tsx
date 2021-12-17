@@ -9,11 +9,21 @@ import './Section01.scss';
 const Section01: FC<IProps> = ({ click }) => {
   return (
     <Container fluid className="section-01">
-      <Header />
+      <div className="header-section">
+        <Header />
+      </div>
       <Row>
         <Container fluid className="section01-main-content">
           <Row className="title">
-            <h1>Chương trình tiếng anh khởi đầu cho trẻ 3-7 tuổi</h1>
+            <div className="title-header">
+              <h2>TAN VAN E-LEARNING</h2>
+            </div>
+            <div className="title-main">
+              <h1>CHƯƠNG TRÌNH LÀM QUEN TIẾNG ANH MẦM NON</h1>
+            </div>
+            <div className="title-footer">
+              <h2>DÀNH CHO TRẺ 3-6 TUỔI</h2>
+            </div>
           </Row>
           <Row className="detail-btn">
             <button onClick={click}>TÌM HIỂU THÊM</button>

@@ -1,5 +1,5 @@
-@import "../../styles/variables";
-@import "../../styles/rwd";
+@import '../../styles/variables';
+@import '../../styles/rwd';
 
 .section08 {
   &-container {
@@ -18,7 +18,8 @@
     }
   }
 
-  &-img, &-content {
+  &-img,
+  &-content {
     margin-top: $space-secondary !important;
   }
 
@@ -53,12 +54,16 @@
     ul {
       color: $primary-color;
       @include flex-center;
+      flex-direction: column;
       flex-wrap: wrap;
 
       li {
         list-style-type: none;
         font-size: 1.6rem;
         width: 50%;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
 
         svg {
           margin-right: 5px;
