@@ -44,7 +44,7 @@ const Header: FC = () => {
               <PhoneIcon sx={{ color: '#2B2A8F', fontSize: '3rem' }} />
             </div>
             <div className="hotline-content">
-              <a href="tel:0000000000">Hotline: 0000 000 000</a>
+              <a href="tel:0000000000">Hotline: 0918291313 – 0916119117</a>
             </div>
           </div>
         </Col>
