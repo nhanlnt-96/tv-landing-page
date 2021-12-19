@@ -26,7 +26,7 @@ const Header: FC = () => {
         <Col
           lg={6}
           sm={12}
-          md={6}
+          md={5}
           className="logo d-flex justify-content-center align-items-center"
         >
           <div className="logo-content">
@@ -36,7 +36,7 @@ const Header: FC = () => {
         <Col
           lg={6}
           sm={12}
-          md={6}
+          md={7}
           className="hotline d-flex justify-content-center align-items-center"
         >
           <div className="hotline-container">
@@ -44,7 +44,7 @@ const Header: FC = () => {
               <PhoneIcon sx={{ color: '#2B2A8F', fontSize: '3rem' }} />
             </div>
             <div className="hotline-content">
-              <a href="tel:0000000000">Hotline: 0918291313 – 0916119117</a>
+              <a>Hotline: 0918291313 – 0916119117</a>
             </div>
           </div>
         </Col>
