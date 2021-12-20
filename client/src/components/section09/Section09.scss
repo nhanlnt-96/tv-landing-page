@@ -23,9 +23,13 @@
       border-radius: 10px;
       border: 2px solid $primary-color;
       width: 400px;
-      height: 400px;
+      //height: 400px;
       @include flex-center;
       flex-direction: column;
+      padding: 10px;
+      @include mobile {
+        padding: 10px 0;
+      }
 
       .form-title {
         margin-bottom: 12px;

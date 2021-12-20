@@ -9,12 +9,13 @@ const Section09: FC = () => {
     <Container fluid className="section-09">
       <Container className="section09-container">
         <Row className="section09-title">
-          <p>ĐĂNG KÝ NHẬN TƯ VẤN MIỄN PHÍ TỪ TÂN VĂN</p>
+          <p>ĐĂNG KÝ NGAY!</p>
         </Row>
         <Row className="section09-form">
           <div className="form-container">
             <p className="form-title">
-              Phụ huynh đăng ký nhận tư vấn Miễn Phí từ Edupia Kid tại đây!
+              Quý Phụ huynh đăng Chương trình Làm quen Tiếng Anh Mầm non TAN VAN
+              E-LEARNING tại đây!
             </p>
             <RegisterForm />
           </div>

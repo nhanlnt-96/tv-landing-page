@@ -1,32 +1,33 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { Col, Image, Row } from 'react-bootstrap';
 import Logo from 'imgs/logo.png';
-import { useWindowSize } from 'helpers/useWindowSize';
+// import { useWindowSize } from 'helpers/useWindowSize';
 import PhoneIcon from '@mui/icons-material/Phone';
 
 import './Header.scss';
 
 const Header: FC = () => {
-  const [offsetY, setOffsetY] = useState<number>(0);
-  const currentWidth = useWindowSize();
-  useEffect(() => {
-    window.onscroll = () => {
-      setOffsetY(window.pageYOffset);
-    };
-  }, []);
+  // const [offsetY, setOffsetY] = useState<number>(0);
+  // const currentWidth = useWindowSize();
+  // useEffect(() => {
+  //   window.onscroll = () => {
+  //     setOffsetY(window.pageYOffset);
+  //   };
+  // }, []);
   return (
     <Row className="header">
-      <div
-        className={`header-container ${
-          offsetY !== 0 && currentWidth >= 768
-            ? 'fixed-header'
-            : 'unfixed-header'
-        }`}
-      >
+      {/*<div*/}
+      {/*  className={`header-container ${*/}
+      {/*    offsetY !== 0 && currentWidth >= 768*/}
+      {/*      ? 'fixed-header'*/}
+      {/*      : 'unfixed-header'*/}
+      {/*  }`}*/}
+      {/*>*/}
+      <div className="header-container">
         <Col
           lg={6}
           sm={12}
-          md={6}
+          md={5}
           className="logo d-flex justify-content-center align-items-center"
         >
           <div className="logo-content">
@@ -36,7 +37,7 @@ const Header: FC = () => {
         <Col
           lg={6}
           sm={12}
-          md={6}
+          md={7}
           className="hotline d-flex justify-content-center align-items-center"
         >
           <div className="hotline-container">
@@ -44,7 +45,7 @@ const Header: FC = () => {
               <PhoneIcon sx={{ color: '#2B2A8F', fontSize: '3rem' }} />
             </div>
             <div className="hotline-content">
-              <a href="tel:0000000000">Hotline: 0000 000 000</a>
+              <a href="tel:0918291313">Hotline: 0918291313 – 0916119117</a>
             </div>
           </div>
         </Col>
