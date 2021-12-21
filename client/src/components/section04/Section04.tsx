@@ -11,9 +11,6 @@ import './Section04.scss';
 const Section04: FC<IProps> = ({ click }) => {
   const [imgSelect, setImgSelect] = useState<any>(Test1);
   const [isSelect, setIsSelect] = useState<number>(0);
-  useEffect(() => {
-    loopImg();
-  }, []);
   const loopImg = () => {
     (async () => {
       for (let i = isSelect; i < section04Content.length; i++) {
@@ -26,6 +23,9 @@ const Section04: FC<IProps> = ({ click }) => {
       }
     })();
   };
+  useEffect(() => {
+    loopImg();
+  }, []);
   const onViewImgDivClick = (img: any, index: number) => {
     setIsSelect(index);
     setImgSelect(img);
