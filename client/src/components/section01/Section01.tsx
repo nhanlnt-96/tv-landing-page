@@ -15,17 +15,14 @@ const Section01: FC<IProps> = ({ click }) => {
       <Row>
         <Container fluid className="section01-main-content">
           <Row className="title">
-            <div className="title-header">
-              <h2>TAN VAN E-LEARNING</h2>
-            </div>
-            <div className="title-main">
-              <h1>CHƯƠNG TRÌNH LÀM QUEN TIẾNG ANH MẦM NON</h1>
-            </div>
-            <div className="title-footer">
-              <h2>DÀNH CHO TRẺ 3-6 TUỔI</h2>
+            <div className="item">
+              <h1>
+                Chương trình làm quen tiếng anh mầm non Tan Van E-Learning
+              </h1>
+              <h1>dành cho trẻ 3-6 tuổi</h1>
             </div>
           </Row>
-          <Row className="detail-btn">
+          <Row className="section01-btn">
             <button onClick={click}>TÌM HIỂU THÊM</button>
           </Row>
           <Container className="register-form">
@@ -36,11 +33,15 @@ const Section01: FC<IProps> = ({ click }) => {
                 lg={6}
                 className="register-desc col-height d-flex flex-column justify-content-center align-items-center"
               >
-                <h2 className="register-title">NHẬN TƯ VẤN MIỄN PHÍ</h2>
+                <h2 className="register-title">ĐĂNG KÝ NGAY</h2>
                 <p className="register-subtitle">
-                  Ba mẹ đăng ký để nhận tư vấn Miễn Phí chương trình tiếng Anh
-                  online cho trẻ trên Tân Văn eLearning tại đây:
+                  Chương trình ưu đãi dành riêng cho bé học tại{' '}
+                  <strong style={{ color: '#ff0000' }}>
+                    308 trường Mầm non
+                  </strong>{' '}
+                  liên kết với
                 </p>
+                <strong>Trung Tâm Ngoại Ngữ Tân Văn</strong>
               </Col>
               <Col sm={12} md={6} lg={6} className="border-left-line">
                 <RegisterForm />

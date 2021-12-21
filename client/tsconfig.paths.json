@@ -82,6 +82,9 @@
       ],
       "helpers/*": [
         "shared/helpers/*"
+      ],
+      "title/*": [
+        "components/title/*"
       ]
     }
   }

@@ -5,9 +5,9 @@
   width: 100%;
   @include flex-center;
   flex-direction: column;
-  @include mobile {
-    height: 300px !important;
-  }
+  //@include mobile {
+  //  height: 300px !important;
+  //}
 
   .item {
     width: 70%;
@@ -15,7 +15,8 @@
       width: 90%;
     }
 
-    input, select {
+    input,
+    select {
       font-size: 1.6rem;
       border-radius: 5px;
     }

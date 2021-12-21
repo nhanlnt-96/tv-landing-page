@@ -45,7 +45,7 @@ const Section10: FC = () => {
           </div>
           <div className="company-hotline">
             <p>
-              <b>Hotline: </b>
+              <b>Hotline: 0918291313 – 0916119117</b>
             </p>
           </div>
         </Col>

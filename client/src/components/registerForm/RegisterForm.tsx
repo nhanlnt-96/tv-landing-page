@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 import { classes } from 'configs/classes';
-import { nameRegex, phoneRegex } from 'regex/regex';
+import { emailRegex, nameRegex, phoneRegex } from 'regex/regex';
 import { IUser } from 'models/users';
 import { appendSpreadsheet } from 'boot/googleSpreadsheet';
 import './ResgiterForm.scss';
@@ -13,6 +13,7 @@ const RegisterForm: FC = () => {
     phoneNumber: '',
     classes: '',
     school: '',
+    email: '',
   };
   const [formInput, setFormInput] = useState<IUser>(initialInput);
   const [errors, setErrors] = useState<any>({});
@@ -25,7 +26,7 @@ const RegisterForm: FC = () => {
     });
   };
   const validateInput = () => {
-    const { fullName, phoneNumber, classes } = formInput;
+    const { fullName, phoneNumber, classes, email } = formInput;
     const newErrors: any = {};
     if ((fullName && !nameRegex.test(fullName)) || !fullName) {
       newErrors.fullName =
@@ -42,6 +43,10 @@ const RegisterForm: FC = () => {
       newErrors.classes = 'Vui lòng chọn lớp học của bé.';
     }
 
+    if (email && !emailRegex.test(email)) {
+      newErrors.email = 'Email nhập vào không đúng (Vd: vidu@abc.com).';
+    }
+
     return newErrors;
   };
   const onRegisterBtnClick = async () => {
@@ -51,12 +56,13 @@ const RegisterForm: FC = () => {
       setErrors(newErrors);
       setIsLoading(false);
     } else {
-      const { fullName, phoneNumber, classes, school } = formInput;
+      const { fullName, phoneNumber, classes, school, email } = formInput;
       const res = await appendSpreadsheet({
         fullName,
         phoneNumber,
         classes,
         school,
+        email,
         status: 'Chưa liên hệ',
       });
       if (res?._rawData) {
@@ -72,7 +78,7 @@ const RegisterForm: FC = () => {
         <Form.Control
           type="text"
           name="fullName"
-          placeholder="Họ tên phụ huynh"
+          placeholder="Họ tên phụ huynh *"
           onChange={(e) => onGetInputHandler('fullName', e.target.value)}
           isInvalid={!!errors.fullName}
         />
@@ -84,7 +90,7 @@ const RegisterForm: FC = () => {
         <Form.Control
           type="text"
           name="phoneNumber"
-          placeholder="Số điện thoại"
+          placeholder="Số điện thoại *"
           onChange={(e) => onGetInputHandler('phoneNumber', e.target.value)}
           isInvalid={!!errors.phoneNumber}
         />
@@ -101,7 +107,7 @@ const RegisterForm: FC = () => {
           isInvalid={!!errors.classes}
         >
           <option value="" disabled>
-            Chọn lớp của bé
+            Chọn lớp của bé *
           </option>
           {classes.map((val, index) => (
             <option key={val.value} value={val.label}>
@@ -117,12 +123,20 @@ const RegisterForm: FC = () => {
         <Form.Control
           type="text"
           name="school"
-          placeholder="Trường Mầm non của bé"
+          placeholder="Trường Mầm non của bé *"
           onChange={(e) => onGetInputHandler('school', e.target.value)}
-          isInvalid={!!errors.phoneNumber}
+        />
+      </Form.Group>
+      <Form.Group className="mb-3 item">
+        <Form.Control
+          type="text"
+          name="email"
+          placeholder="Email (nếu có)"
+          onChange={(e) => onGetInputHandler('email', e.target.value)}
+          isInvalid={!!errors.email}
         />
         <Form.Control.Feedback type="invalid">
-          {errors.phoneNumber}
+          {errors.email}
         </Form.Control.Feedback>
       </Form.Group>
       <span>Bộ phận Giáo vụ Tân Văn sẽ gọi điện hỗ trợ</span>

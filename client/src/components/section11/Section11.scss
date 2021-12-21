@@ -1,18 +1,12 @@
 @import '../../styles/variables';
 @import '../../styles/rwd';
 
+.section-11{
+  @include flex-center;
+  flex-direction: column;
+}
+
 .section11 {
-  &-title {
-    text-align: center;
-
-    p {
-      @include primary-text-size;
-      @include mobile {
-        font-size: 2.1rem;
-      }
-    }
-  }
-
   &-content .lp {
     &-container {
       @include flex-center;

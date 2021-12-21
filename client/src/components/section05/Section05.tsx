@@ -9,14 +9,13 @@ import StarsIcon from '@mui/icons-material/Stars';
 
 import 'react-vertical-timeline-component/style.min.css';
 import './Section05.scss';
+import Title from 'title/Title';
 
 const Section05: FC = () => {
   return (
     <Container className="section-05">
       <div className="section05-container">
-        <Row className="section05-title">
-          <h6>LỘ TRÌNH HỌC TOÀN DIỆN TỪ CƠ BẢN ĐẾN NÂNG CAO</h6>
-        </Row>
+        <Title title={'LỘ TRÌNH HỌC TOÀN DIỆN TỪ CƠ BẢN ĐẾN NÂNG CAO'} />
         <Row className="section05-content">
           <VerticalTimeline className="vertical-timeline--customer">
             {section05Content.map((val, index) => (

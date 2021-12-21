@@ -3,13 +3,14 @@ import { Container, Row } from 'react-bootstrap';
 import './Section11.scss';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { IProps } from 'model/props';
+import Title from 'title/Title';
 
 const Section11: FC<IProps> = ({ click }) => {
   return (
     <Container className="section-11">
-      <Row className="section11-title">
-        <p>CÁC BƯỚC ĐĂNG KÝ THAM GIA CHƯƠNG TRÌNH TAN VAN E-LEARNING?</p>
-      </Row>
+      <Title
+        title={'CÁC BƯỚC ĐĂNG KÝ THAM GIA CHƯƠNG TRÌNH TAN VAN E-LEARNING?'}
+      />
       <Row className="section11-content">
         <div className="lp-content section06-child-content">
           <div className="content-item">
