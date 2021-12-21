@@ -82,6 +82,9 @@
       ],
       "helpers/*": [
         "shared/helpers/*"
+      ],
+      "section12/*": [
+        "components/section12/*"
       ]
     }
   }
