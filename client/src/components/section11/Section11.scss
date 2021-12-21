@@ -1,6 +1,11 @@
 @import '../../styles/variables';
 @import '../../styles/rwd';
 
+.section-11{
+  @include flex-center;
+  flex-direction: column;
+}
+
 .section11 {
   &-content .lp {
     &-container {

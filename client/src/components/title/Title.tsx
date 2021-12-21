@@ -9,9 +9,7 @@ interface IProps {
 const Title: FC<IProps> = ({ title }) => {
   return (
     <Row className="title-container">
-      <div className="title-content">
-        <p>{title}</p>
-      </div>
+      <p>{title}</p>
     </Row>
   );
 };

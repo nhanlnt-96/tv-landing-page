@@ -2,6 +2,11 @@
 @import '../../styles/rwd';
 
 .section06 {
+  &-container {
+    @include flex-center;
+    flex-direction: column;
+  }
+
   &-pronunciation,
   &-foreign {
     margin-top: $space-secondary !important;

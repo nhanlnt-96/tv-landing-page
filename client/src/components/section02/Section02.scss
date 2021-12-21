@@ -3,6 +3,8 @@
 
 .section-02 {
   scroll-behavior: smooth;
+  @include flex-center;
+  flex-direction: column;
 }
 
 .diagram {

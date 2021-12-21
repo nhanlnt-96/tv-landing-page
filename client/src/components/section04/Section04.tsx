@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 import { section04Content } from 'configs/section04Content';
 import { IProps } from 'model/props';
 import Test1 from 'imgs/bg.jpg';
@@ -31,7 +31,7 @@ const Section04: FC<IProps> = ({ click }) => {
     setImgSelect(img);
   };
   return (
-    <Row className="section-04">
+    <Container className="section-04">
       <div className="section04-container">
         <div className="section04-content">
           <Title
@@ -62,7 +62,7 @@ const Section04: FC<IProps> = ({ click }) => {
           <button onClick={click}>ĐĂNG KÝ NGAY</button>
         </div>
       </div>
-    </Row>
+    </Container>
   );
 };
 

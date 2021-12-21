@@ -2,6 +2,10 @@
 @import '../../styles/rwd';
 
 .section09 {
+  &-container{
+    @include flex-center;
+    flex-direction: column;
+  }
   &-form {
     margin-top: $space-secondary !important;
     @include flex-center;
