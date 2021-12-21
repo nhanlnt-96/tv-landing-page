@@ -13,8 +13,8 @@ const Section03: FC<IProps> = ({ click }) => {
       <Row className="section03-title">
         <h6>
           CHỈ <span style={{ color: '#ff0000' }}>15 PHÚT MỖI NGÀY</span> TRÊN
-          TAN VAN E-LEARNING CON VỪA HỌC VỪA CHƠI VỚI CHƯƠNG TRÌNH LÀM QUEN
-          TIẾNG ANH MẦM NON
+          TAN VAN E-LEARNING CENTER CON VỪA HỌC VỪA CHƠI VỚI CHƯƠNG TRÌNH LÀM
+          QUEN TIẾNG ANH MẦM NON
         </h6>
       </Row>
       <Row className="section03-content">

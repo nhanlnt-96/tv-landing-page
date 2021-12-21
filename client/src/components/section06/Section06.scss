@@ -2,18 +2,9 @@
 @import '../../styles/rwd';
 
 .section06 {
-  &-title {
-    text-align: center;
-
-    h6 {
-      @include primary-text-size;
-    }
-
-    //p {
-    //  margin-top: $space-secondary;
-    //  font-size: 1.7rem;
-    //  font-weight: bold;
-    //}
+  &-container {
+    @include flex-center;
+    flex-direction: column;
   }
 
   &-pronunciation,

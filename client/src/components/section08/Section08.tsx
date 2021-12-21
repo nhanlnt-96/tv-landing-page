@@ -1,18 +1,17 @@
 import React, { FC } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import Img from 'imgs/section08.png';
+import Img from 'imgs/section08.jpg';
 import { section08Content } from 'configs/section08Content';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 import './Section08.scss';
+import Title from 'title/Title';
 
 const Section08: FC = () => {
   return (
     <Container className="section-08">
       <div className="section08-container">
-        <Row className="section08-title">
-          <p>TRỌN BỘ SẢN PHẨM TAN VAN E-LEARNING</p>
-        </Row>
+        <Title title={'TRỌN BỘ SẢN PHẨM TAN VAN E-LEARNING'} />
         <Row className="section08-img">
           <img src={Img} alt="tv-elearning" />
         </Row>
