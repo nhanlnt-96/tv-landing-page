@@ -3,17 +3,8 @@
 
 .section-02 {
   scroll-behavior: smooth;
-}
-
-.section-02 .section02-title {
-  text-align: center;
-
-  p {
-    @include primary-text-size;
-    @include mobile {
-      font-size: 1.8rem;
-    }
-  }
+  @include flex-center;
+  flex-direction: column;
 }
 
 .diagram {
