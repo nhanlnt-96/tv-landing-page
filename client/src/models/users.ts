@@ -3,4 +3,5 @@ export interface IUser {
   phoneNumber: string;
   classes: string;
   school: string;
+  email: string;
 }
