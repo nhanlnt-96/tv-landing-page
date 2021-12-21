@@ -1,15 +1,31 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { section04Content } from 'configs/section04Content';
 import { IProps } from 'model/props';
 import Test1 from 'imgs/bg.jpg';
+import Title from 'title/Title';
+import delay from 'delay';
 
 import './Section04.scss';
-import Title from 'title/Title';
 
 const Section04: FC<IProps> = ({ click }) => {
   const [imgSelect, setImgSelect] = useState<any>(Test1);
   const [isSelect, setIsSelect] = useState<number>(0);
+  useEffect(() => {
+    loopImg();
+  }, []);
+  const loopImg = () => {
+    (async () => {
+      for (let i = isSelect; i < section04Content.length; i++) {
+        setIsSelect(i);
+        setImgSelect(section04Content[i].img);
+        await delay(15 * 1000);
+        if (i === section04Content.length - 1) {
+          loopImg();
+        }
+      }
+    })();
+  };
   const onViewImgDivClick = (img: any, index: number) => {
     setIsSelect(index);
     setImgSelect(img);
