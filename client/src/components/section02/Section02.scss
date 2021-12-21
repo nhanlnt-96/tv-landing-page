@@ -5,17 +5,6 @@
   scroll-behavior: smooth;
 }
 
-.section-02 .section02-title {
-  text-align: center;
-
-  p {
-    @include primary-text-size;
-    @include mobile {
-      font-size: 1.8rem;
-    }
-  }
-}
-
 .diagram {
   &-container {
     margin-top: $space-secondary;

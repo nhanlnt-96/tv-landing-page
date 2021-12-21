@@ -2,18 +2,6 @@
 @import '../../styles/rwd';
 
 .section09 {
-  &-title {
-    text-align: center;
-    color: #ff0000;
-
-    p {
-      @include primary-text-size;
-      @include mobile {
-        font-size: 2.1rem;
-      }
-    }
-  }
-
   &-form {
     margin-top: $space-secondary !important;
     @include flex-center;

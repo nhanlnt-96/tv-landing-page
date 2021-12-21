@@ -5,6 +5,7 @@ import { IProps } from 'model/props';
 import Test1 from 'imgs/bg.jpg';
 
 import './Section04.scss';
+import Title from 'title/Title';
 
 const Section04: FC<IProps> = ({ click }) => {
   const [imgSelect, setImgSelect] = useState<any>(Test1);
@@ -17,12 +18,11 @@ const Section04: FC<IProps> = ({ click }) => {
     <Row className="section-04">
       <div className="section04-container">
         <div className="section04-content">
-          <Row className="content-title">
-            <h6>
-              KHÓA HỌC LÀM QUEN TIẾNG ANH MẦM NON TAN VAN E-LEARNING MANG LẠI
-              ĐIỀU GÌ CHO CON?
-            </h6>
-          </Row>
+          <Title
+            title={
+              'KHÓA HỌC LÀM QUEN TIẾNG ANH MẦM NON TAN VAN E-LEARNING MANG LẠI ĐIỀU GÌ CHO CON?'
+            }
+          />
           <Row className="content-items">
             <Col lg={7} md={6} xs={12} className="content">
               {section04Content.map((val, index) => (

@@ -2,17 +2,6 @@
 @import '../../styles/rwd';
 
 .section11 {
-  &-title {
-    text-align: center;
-
-    p {
-      @include primary-text-size;
-      @include mobile {
-        font-size: 2.1rem;
-      }
-    }
-  }
-
   &-content .lp {
     &-container {
       @include flex-center;

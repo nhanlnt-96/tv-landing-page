@@ -8,14 +8,13 @@ import {
 import { IProps } from 'model/props';
 
 import './Section06.scss';
+import Title from 'title/Title';
 
 const Section06: FC<IProps> = ({ click }) => {
   return (
     <Container fluid className="section-06">
       <Container className="section06-container">
-        <Row className="section06-title">
-          <h6>CON SẼ HỌC NHƯ THẾ NÀO TRÊN TAN VAN E-LEARNING?</h6>
-        </Row>
+        <Title title={'CON SẼ HỌC NHƯ THẾ NÀO TRÊN TAN VAN E-LEARNING?'} />
         {/*<Row className="section06-pronunciation">*/}
         {/*  <LearnPronunciation />*/}
         {/*</Row>*/}

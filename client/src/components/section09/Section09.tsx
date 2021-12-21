@@ -3,14 +3,13 @@ import { Container, Row } from 'react-bootstrap';
 import RegisterForm from 'registerForm/RegisterForm';
 
 import './Section09.scss';
+import Title from 'title/Title';
 
 const Section09: FC = () => {
   return (
     <Container fluid className="section-09">
       <Container className="section09-container">
-        <Row className="section09-title">
-          <p>ĐĂNG KÝ NGAY!</p>
-        </Row>
+        <Title title={'ĐĂNG KÝ NGAY!'} />
         <Row className="section09-form">
           <div className="form-container">
             <p className="form-title">

@@ -17,25 +17,6 @@
     }
   }
 
-  &-title {
-    text-align: center;
-    @include flex-center;
-    @include mobile {
-      height: unset;
-    }
-
-    h6 {
-      color: $primary-color;
-      @include primary-text-size;
-      @include tablet {
-        font-size: 2.6rem;
-      }
-      @include mobile {
-        font-size: 2.2rem;
-      }
-    }
-  }
-
   &-content {
     margin-top: $space-secondary !important;
 
