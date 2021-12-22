@@ -5,7 +5,7 @@ import Section03 from 'section03/Section03';
 import Section04 from 'section04/Section04';
 import Section05 from 'section05/Section05';
 import Section06 from 'section06/Section06';
-import Section07 from 'section07/Section07';
+// import Section07 from 'section07/Section07';
 import Section08 from 'section08/Section08';
 import Section09 from 'section09/Section09';
 import Section10 from 'section10/Section10';
@@ -50,9 +50,9 @@ const HomePage: FC = () => {
       <div className="space-top">
         <Section11 click={onMoveToSection09BtnClick} />
       </div>
-      <div className="space-top">
-        <Section07 />
-      </div>
+      {/*<div className="space-top">*/}
+      {/*  <Section07 />*/}
+      {/*</div>*/}
       <div className="space-top">
         <Section08 />
       </div>

@@ -18,9 +18,9 @@ const Section01: FC<IProps> = ({ click }) => {
           <Row className="title">
             <div className="item">
               <h1>
-                Chương trình làm quen tiếng anh mầm non Tan Van E-Learning
+                Chương trình Làm quen Tiếng Anh Mầm non TAN VAN E-LEARNING
               </h1>
-              <h1>dành cho trẻ 3-6 tuổi</h1>
+              <h1>Dành cho trẻ 3-6 tuổi</h1>
             </div>
           </Row>
           <Row className="section01-btn">

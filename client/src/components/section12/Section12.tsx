@@ -12,11 +12,16 @@ import './Section12.scss';
 const Section12: FC<IProps> = ({ click }) => {
   return (
     <div className="section-12">
-      <Title
-        title={
-          'Chương trình ưu đãi dành riêng cho bé học tại 308 trường Mầm non liên kết với Trung Tâm Ngoại Ngữ Tân Văn'
-        }
-      />
+      <div className="section12-title">
+        <p>CHƯƠNG TRÌNH ƯU ĐÃI</p>
+        <p>DÀNH CHO BÉ HỌC TẠI 308 TRƯỜNG MẦM NON</p>
+        <p>LIÊN KẾT VỚI TRUNG TÂM NGOẠI NGỮ TÂN VĂN</p>
+      </div>
+      {/*<Title*/}
+      {/*  title={*/}
+      {/*    'Chương trình ưu đãi dành riêng cho bé học tại 308 trường Mầm non liên kết với Trung Tâm Ngoại Ngữ Tân Văn'*/}
+      {/*  }*/}
+      {/*/>*/}
       <div className="section12-container">
         {section12Content.map((val, index) => (
           <div key={index} className="item">
