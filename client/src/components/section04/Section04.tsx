@@ -1,5 +1,5 @@
-import React, { FC, useEffect, useLayoutEffect, useState } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import React, { FC, useLayoutEffect, useState } from 'react';
+import { Row, Col } from 'react-bootstrap';
 import { section04Content } from 'configs/section04Content';
 import { IProps } from 'model/props';
 import Test1 from 'imgs/bg.jpg';
