@@ -16,21 +16,28 @@
     margin-top: $space-primary !important;
   }
 
+  .section02-bg,.section03-bg,.section05-bg,.section12-bg{
+    padding: 20px 0;
+  }
+
   .section02-bg {
     background: url('../../assets/imgs/bg5.png') no-repeat center;
     background-size: cover;
-    padding: 20px 0;
   }
 
   .section03-bg {
     background: url('../../assets/imgs/bg6.png') no-repeat center;
     background-size: cover;
-    padding: 20px 0;
   }
 
   .section05-bg {
     background-color: #fff4e4;
-    padding: 20px 0;
+
+  }
+
+  .section12-bg {
+    background: url('../../assets/imgs/bg7.jpg') no-repeat center;
+    background-size: cover;
   }
 
   //.section {

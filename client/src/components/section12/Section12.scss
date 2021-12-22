@@ -5,3 +5,97 @@
   @include flex-center;
   flex-direction: column;
 }
+
+.section12-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+  margin-top: $space-secondary !important;
+}
+
+.section12-container .item {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+
+  &-header {
+    width: 100%;
+    height: 100px;
+    @include flex-center;
+  }
+
+  &-content {
+    margin-top: 10px;
+    border-top: 2px solid #EDF1F4;
+    min-height: 300px;
+    padding: 20px 10px;
+
+    p {
+      font-size: 1.8rem;
+      font-weight: 400;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      svg {
+        font-size: 1.8rem;
+        color: $primary-color;
+      }
+    }
+
+    .item-bonus {
+      padding: 10px 0;
+      margin-top: 10px;
+      border-top: 2px solid #EDF1F4;
+
+      p:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.message {
+  &-body {
+    padding: 0 10px;
+    @include flex-center;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    border-radius: 10px;
+  }
+
+  &-avatar {
+    flex: 1;
+    @include flex-center;
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      @include flex-center;
+      background-color: #E2F7FF;
+      border-radius: 10px;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  &-content {
+    flex: 2;
+    padding: 10px;
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+
+    p {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  }
+}
