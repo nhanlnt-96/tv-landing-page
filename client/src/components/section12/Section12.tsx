@@ -21,7 +21,11 @@ const Section12: FC<IProps> = ({ click }) => {
         {section12Content.map((val, index) => (
           <div key={index} className="item">
             <div className="item-header">
-              <MessageBox title={val.title} price={val.price} />
+              <MessageBox
+                title={val.title}
+                price={val.price}
+                avatar={val.avatar}
+              />
             </div>
             <div className="item-content">
               {val.benefit.map((benefit, benefitKey) => (
