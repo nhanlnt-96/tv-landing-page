@@ -2,10 +2,11 @@
 @import '../../styles/rwd';
 
 .section09 {
-  &-container{
+  &-container {
     @include flex-center;
     flex-direction: column;
   }
+
   &-form {
     margin-top: $space-secondary !important;
     @include flex-center;
@@ -21,6 +22,7 @@
       padding: 10px;
       @include mobile {
         padding: 10px 0;
+        width: 100%;
       }
 
       .form-title {

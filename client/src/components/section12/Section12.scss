@@ -4,6 +4,7 @@
 .section-12 {
   @include flex-center;
   flex-direction: column;
+  padding: 0 10px;
 }
 
 .section12-container {
@@ -12,6 +13,12 @@
   grid-gap: 10px;
   width: 100%;
   margin-top: $space-secondary !important;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .section12-container .item {
@@ -28,7 +35,7 @@
 
   &-content {
     margin-top: 10px;
-    border-top: 2px solid #EDF1F4;
+    border-top: 2px solid #edf1f4;
     min-height: 300px;
     padding: 20px 10px;
 
@@ -49,7 +56,7 @@
     .item-bonus {
       padding: 10px 0;
       margin-top: 10px;
-      border-top: 2px solid #EDF1F4;
+      border-top: 2px solid #edf1f4;
 
       p:not(:last-child) {
         margin-bottom: 5px;
@@ -77,7 +84,7 @@
       width: 90px;
       height: 90px;
       @include flex-center;
-      background-color: #E2F7FF;
+      background-color: #e2f7ff;
       border-radius: 10px;
 
       img {
