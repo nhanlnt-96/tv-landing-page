@@ -85,6 +85,12 @@
       ],
       "title/*": [
         "components/title/*"
+      ],
+      "section12/*": [
+        "components/section12/*"
+      ],
+      "section11/*": [
+        "components/section11/*"
       ]
     }
   }
