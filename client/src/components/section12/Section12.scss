@@ -21,6 +21,17 @@
   }
 }
 
+.section12-register-btn {
+  margin-top: $space-secondary !important;
+  @include flex-center;
+
+  button {
+    @include primary-button;
+    @include pulse-animate-btn;
+    background-color: $primary-color;
+  }
+}
+
 .section12-container .item {
   padding: 10px;
   border-radius: 10px;

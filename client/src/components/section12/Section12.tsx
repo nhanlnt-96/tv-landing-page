@@ -5,10 +5,11 @@ import { MessageBox } from 'section12/components';
 import { section12Content } from 'configs/section12Content';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import { IProps } from 'model/props';
 
 import './Section12.scss';
 
-const Section12: FC = () => {
+const Section12: FC<IProps> = ({ click }) => {
   return (
     <div className="section-12">
       <Title
@@ -41,6 +42,9 @@ const Section12: FC = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="section12-register-btn">
+        <button onClick={click}>ĐĂNG KÝ NGAY</button>
       </div>
     </div>
   );

@@ -16,7 +16,10 @@
     margin-top: $space-primary !important;
   }
 
-  .section02-bg,.section03-bg,.section05-bg,.section12-bg{
+  .section02-bg,
+  .section03-bg,
+  .section05-bg,
+  .section12-bg {
     padding: 20px 0;
   }
 
@@ -32,11 +35,10 @@
 
   .section05-bg {
     background-color: #fff4e4;
-
   }
 
   .section12-bg {
-    background: url('../../assets/imgs/bg7.jpg') no-repeat center;
+    background: url('../../assets/imgs/bg8.jpeg') no-repeat center;
     background-size: cover;
   }
 
