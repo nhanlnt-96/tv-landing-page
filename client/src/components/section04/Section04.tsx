@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useLayoutEffect, useState } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import { section04Content } from 'configs/section04Content';
 import { IProps } from 'model/props';
@@ -11,9 +11,9 @@ import './Section04.scss';
 const Section04: FC<IProps> = ({ click }) => {
   const [imgSelect, setImgSelect] = useState<any>(Test1);
   const [isSelect, setIsSelect] = useState<number>(0);
-  const loopImg = () => {
+  const loopImg = (selected: number = 0) => {
     (async () => {
-      for (let i = isSelect; i < section04Content.length; i++) {
+      for (let i = selected; i < section04Content.length; i++) {
         setIsSelect(i);
         setImgSelect(section04Content[i].img);
         await delay(15 * 1000);
@@ -23,7 +23,7 @@ const Section04: FC<IProps> = ({ click }) => {
       }
     })();
   };
-  useEffect(() => {
+  useLayoutEffect(() => {
     loopImg();
   }, []);
   const onViewImgDivClick = (img: any, index: number) => {
@@ -31,7 +31,7 @@ const Section04: FC<IProps> = ({ click }) => {
     setImgSelect(img);
   };
   return (
-    <Container className="section-04">
+    <div className="section-04">
       <div className="section04-container">
         <div className="section04-content">
           <Title
@@ -62,7 +62,7 @@ const Section04: FC<IProps> = ({ click }) => {
           <button onClick={click}>ĐĂNG KÝ NGAY</button>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

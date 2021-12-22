@@ -8,6 +8,7 @@
 
 .section-04 .section04 {
   &-container {
+    width: 100%;
     padding: 20px 0;
     position: relative;
     @include flex-center;
@@ -21,6 +22,7 @@
       width: 100%;
     }
     @include mobile {
+      padding: 0 10px;
       width: 100%;
     }
 
