@@ -165,6 +165,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 40px;
+    img{
+      width: 100%;
+    }
     @include tablet {
       grid-gap: 30px;
     }
@@ -175,6 +178,9 @@
 
   &-video {
     @include flex-center;
+    img{
+      width: 100%;
+    }
   }
 
   &-description {
