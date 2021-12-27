@@ -1,5 +1,5 @@
 import Test1 from 'imgs/bg.jpg';
-import Test2 from 'imgs/bg1.jpg';
+import Test2 from 'imgs/pronunciation.jpeg';
 import Test3 from 'imgs/bg2.jpeg';
 import Test4 from 'imgs/bg3.png';
 

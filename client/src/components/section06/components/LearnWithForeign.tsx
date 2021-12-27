@@ -1,7 +1,5 @@
 import { FC } from 'react';
-import VideoPlayer from 'videoPlayer/VideoPlayer';
-import Intro1 from 'imgs/intro1.png';
-import { VIDEO_INTRO_1 } from 'configs/videoUrl';
+import Img1 from 'imgs/kidLearning.jpeg';
 
 export const LearnWithForeign: FC = () => {
   return (
@@ -11,7 +9,7 @@ export const LearnWithForeign: FC = () => {
       </div>
       <div className="lwf-content section06-child-content">
         <div className="lwf-video">
-          <VideoPlayer videoUrl={VIDEO_INTRO_1} posterImg={Intro1} />
+          <img src={Img1} alt=""/>
         </div>
         <div className="lwf-description">
           <div className="description-container">
