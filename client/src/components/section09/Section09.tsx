@@ -13,8 +13,8 @@ const Section09: FC = () => {
         <Row className="section09-form">
           <div className="form-container">
             <p className="form-title">
-              Quý Phụ huynh đăng Chương trình Làm quen Tiếng Anh Mầm non TAN VAN
-              E-LEARNING tại đây!
+              Quý Phụ huynh đăng ký Chương trình Làm quen Tiếng Anh Mầm non TAN
+              VAN E-LEARNING tại đây!
             </p>
             <RegisterForm />
           </div>
