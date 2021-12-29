@@ -24,6 +24,28 @@
   }
 }
 
+.section06-title {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+
+  h6 {
+    font-size: 2.7rem;
+    font-weight: bolder;
+    @include mobile {
+      font-size: 1.7rem;
+    }
+    @include xsmall {
+      font-size: 1.5rem;
+    }
+  }
+}
+
 .section06-pronunciation .lp {
   &-container {
     @include flex-center;
@@ -165,9 +187,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 40px;
-    img{
+
+    img {
       width: 100%;
     }
+
     @include tablet {
       grid-gap: 30px;
     }
@@ -178,7 +202,8 @@
 
   &-video {
     @include flex-center;
-    img{
+
+    img {
       width: 100%;
     }
   }

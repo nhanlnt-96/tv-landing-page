@@ -42,6 +42,12 @@
             @include mobile {
               font-size: 1.5rem;
             }
+            @include xsmall {
+              font-size: 1.5rem;
+            }
+            @include xxsmall {
+              font-size: 1.2rem;
+            }
             @include tablet {
               font-size: 1.5rem;
             }
@@ -118,6 +124,9 @@
           }
           @include xsmall {
             font-size: 1.7rem;
+          }
+          @include xxsmall {
+            font-size: 1.5rem;
           }
           @include tablet {
             font-size: 2.3rem;
