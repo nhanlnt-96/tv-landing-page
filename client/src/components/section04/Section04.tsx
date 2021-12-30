@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { section04Content } from 'configs/section04Content';
 import { IProps } from 'model/props';
 import Test1 from 'imgs/bg.jpg';
@@ -31,16 +31,18 @@ const Section04: FC<IProps> = ({ click }) => {
     setImgSelect(img);
   };
   return (
-    <Container className="section-04">
+    <div className="section-04">
       <div className="section04-container">
         <div className="section04-content">
-          <Title
-            title={
-              'KHÓA HỌC LÀM QUEN TIẾNG ANH MẦM NON TAN VAN E-LEARNING MANG LẠI ĐIỀU GÌ CHO CON?'
-            }
-          />
+          <Row style={{ padding: '0 10px' }}>
+            <Title
+              title={
+                'KHÓA HỌC LÀM QUEN TIẾNG ANH MẦM NON TAN VAN E-LEARNING MANG LẠI ĐIỀU GÌ CHO CON?'
+              }
+            />
+          </Row>
           <Row className="content-items">
-            <Col lg={7} md={6} xs={12} className="content">
+            <Col lg={4} md={12} xs={12} className="content">
               {section04Content.map((val, index) => (
                 <div
                   className={`item ${
@@ -53,7 +55,12 @@ const Section04: FC<IProps> = ({ click }) => {
                 </div>
               ))}
             </Col>
-            <Col lg={5} md={6} xs={12} className="img">
+            <Col
+              lg={8}
+              md={12}
+              xs={12}
+              className="img d-flex justify-content-center align-items-center"
+            >
               <img src={imgSelect} alt="tan-van-e-learning" />
             </Col>
           </Row>
@@ -62,7 +69,7 @@ const Section04: FC<IProps> = ({ click }) => {
           <button onClick={click}>ĐĂNG KÝ NGAY</button>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

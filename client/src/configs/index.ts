@@ -8,3 +8,4 @@ export * from './section07Content';
 export * from './section08Content';
 export * from './section10Content';
 export * from './videoUrl';
+export * from './section12Content';

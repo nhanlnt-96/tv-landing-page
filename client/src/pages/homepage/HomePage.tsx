@@ -5,11 +5,12 @@ import Section03 from 'section03/Section03';
 import Section04 from 'section04/Section04';
 import Section05 from 'section05/Section05';
 import Section06 from 'section06/Section06';
-import Section07 from 'section07/Section07';
+// import Section07 from 'section07/Section07';
 import Section08 from 'section08/Section08';
 import Section09 from 'section09/Section09';
 import Section10 from 'section10/Section10';
-import Section11 from '../../components/section11/Section11';
+import Section11 from 'section11/Section11';
+import Section12 from 'section12/Section12';
 import { Container } from 'react-bootstrap';
 import './HomePage.scss';
 
@@ -28,6 +29,9 @@ const HomePage: FC = () => {
   return (
     <Container className="homepage-container" fluid>
       <Section01 click={onMoveToSection02BtnClick} />
+      <div className="space-top section12-bg">
+        <Section12 click={onMoveToSection09BtnClick} />
+      </div>
       <div ref={section02Ref} className="space-top section02-bg">
         <Section02 click={onMoveToSection09BtnClick} />
       </div>
@@ -46,9 +50,9 @@ const HomePage: FC = () => {
       <div className="space-top">
         <Section11 click={onMoveToSection09BtnClick} />
       </div>
-      <div className="space-top">
-        <Section07 />
-      </div>
+      {/*<div className="space-top">*/}
+      {/*  <Section07 />*/}
+      {/*</div>*/}
       <div className="space-top">
         <Section08 />
       </div>

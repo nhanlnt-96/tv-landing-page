@@ -9,7 +9,7 @@ interface IProps {
 const Title: FC<IProps> = ({ title }) => {
   return (
     <Row className="title-container">
-      <p>{title}</p>
+      <p>{title.toUpperCase()}</p>
     </Row>
   );
 };

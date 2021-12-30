@@ -8,9 +8,11 @@ type Props = {
 const AnimateText: FC<Props> = ({ text }) => {
   return (
     <>
-      <h1>
+      <h1 className="animate-text">
         {text.split('').map((val, index) => (
-          <span key={index}>{val}</span>
+          <span className="sub-animate-text" key={index}>
+            {val}
+          </span>
         ))}
       </h1>
     </>

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import VideoPlayer from 'videoPlayer/VideoPlayer';
-import Intro1 from 'imgs/intro1.png';
 import { VIDEO_INTRO_1 } from 'configs/videoUrl';
+import Intro1 from 'imgs/intro1.png';
 
 export const LearnWithForeign: FC = () => {
   return (
@@ -15,9 +15,6 @@ export const LearnWithForeign: FC = () => {
         </div>
         <div className="lwf-description">
           <div className="description-container">
-            {/*<div className="description-title">*/}
-            {/*  <h6>Học cùng giáo viên bản ngữ sẽ giúp con</h6>*/}
-            {/*</div>*/}
             <p>
               Con sử dụng điện thoại, máy tính bảng, laptop, máy vi tính,… mở
               bài học video do Giáo viên Việt Nam và Giáo viên Nước ngoài giảng

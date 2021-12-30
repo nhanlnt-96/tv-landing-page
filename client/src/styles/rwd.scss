@@ -4,6 +4,12 @@ $mobile-width: 480px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
+@mixin xxsmall {
+  @media (max-width: #{$xsmall-width - 1px}) {
+    @content;
+  }
+}
+
 @mixin xsmall {
   @media (width: #{$xsmall-width}) {
     @content;

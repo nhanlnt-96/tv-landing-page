@@ -1,43 +1,37 @@
 import React, { FC } from 'react';
 import { Col, Image, Row } from 'react-bootstrap';
 import Logo from 'imgs/logo.png';
-// import { useWindowSize } from 'helpers/useWindowSize';
 import PhoneIcon from '@mui/icons-material/Phone';
 
 import './Header.scss';
 
 const Header: FC = () => {
-  // const [offsetY, setOffsetY] = useState<number>(0);
-  // const currentWidth = useWindowSize();
-  // useEffect(() => {
-  //   window.onscroll = () => {
-  //     setOffsetY(window.pageYOffset);
-  //   };
-  // }, []);
   return (
     <Row className="header">
-      {/*<div*/}
-      {/*  className={`header-container ${*/}
-      {/*    offsetY !== 0 && currentWidth >= 768*/}
-      {/*      ? 'fixed-header'*/}
-      {/*      : 'unfixed-header'*/}
-      {/*  }`}*/}
-      {/*>*/}
       <div className="header-container">
         <Col
           lg={6}
           sm={12}
-          md={5}
+          md={6}
           className="logo d-flex justify-content-center align-items-center"
         >
           <div className="logo-content">
             <Image src={Logo} rounded />
+            <div className="img-desc">
+              <p className="title d-flex" style={{ color: '#028139' }}>
+                HỆ THỐNG GIÁO DỤC{' '}
+                <p style={{ color: '#FC161B', marginLeft: '5px' }}> TÂN VĂN</p>
+              </p>
+              <p className="subtitle" style={{ color: '#3336D0' }}>
+                Tan Van Education System
+              </p>
+            </div>
           </div>
         </Col>
         <Col
           lg={6}
           sm={12}
-          md={7}
+          md={6}
           className="hotline d-flex justify-content-center align-items-center"
         >
           <div className="hotline-container">

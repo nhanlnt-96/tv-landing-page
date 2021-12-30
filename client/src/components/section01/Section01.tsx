@@ -5,6 +5,7 @@ import Header from 'header/Header';
 import { IProps } from 'model/props';
 
 import './Section01.scss';
+import AnimateText from 'animateText/AnimateText';
 
 const Section01: FC<IProps> = ({ click }) => {
   return (
@@ -17,9 +18,9 @@ const Section01: FC<IProps> = ({ click }) => {
           <Row className="title">
             <div className="item">
               <h1>
-                Chương trình làm quen tiếng anh mầm non Tan Van E-Learning
+                Chương trình Làm quen Tiếng Anh Mầm non TAN VAN E-LEARNING
               </h1>
-              <h1>dành cho trẻ 3-6 tuổi</h1>
+              <h1>Dành cho trẻ 3-6 tuổi</h1>
             </div>
           </Row>
           <Row className="section01-btn">
@@ -33,15 +34,7 @@ const Section01: FC<IProps> = ({ click }) => {
                 lg={6}
                 className="register-desc col-height d-flex flex-column justify-content-center align-items-center"
               >
-                <h2 className="register-title">ĐĂNG KÝ NGAY</h2>
-                <p className="register-subtitle">
-                  Chương trình ưu đãi dành riêng cho bé học tại{' '}
-                  <strong style={{ color: '#ff0000' }}>
-                    308 trường Mầm non
-                  </strong>{' '}
-                  liên kết với
-                </p>
-                <strong>Trung Tâm Ngoại Ngữ Tân Văn</strong>
+                <AnimateText text={'ĐĂNG KÝ NGAY'} />
               </Col>
               <Col sm={12} md={6} lg={6} className="border-left-line">
                 <RegisterForm />

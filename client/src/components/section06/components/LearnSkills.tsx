@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import VideoPlayer from 'videoPlayer/VideoPlayer';
+import { VIDEO_INTRO_2 } from 'configs/videoUrl';
 import Intro1 from 'imgs/intro1.png';
-import { VIDEO_INTRO_1 } from 'configs/videoUrl';
+import VideoPlayer from 'videoPlayer/VideoPlayer';
 
 export const LearnSkills: FC = () => {
   return (
@@ -12,9 +12,6 @@ export const LearnSkills: FC = () => {
       <div className="lwf-content section06-child-content">
         <div className="lwf-description">
           <div className="description-container">
-            {/*<div className="description-title">*/}
-            {/*  <h6>Môi trường luyện tập không giới hạn</h6>*/}
-            {/*</div>*/}
             <p>
               Con thao tác các bài tập dạng game và luyện tập các nội dung trong
               bài học. Kết quả của các bài tập con thực hiện được lưu trên hệ
@@ -23,7 +20,7 @@ export const LearnSkills: FC = () => {
           </div>
         </div>
         <div className="lwf-video">
-          <VideoPlayer videoUrl={VIDEO_INTRO_1} posterImg={Intro1} />
+          <VideoPlayer videoUrl={VIDEO_INTRO_2} posterImg={Intro1} />
         </div>
       </div>
     </div>
