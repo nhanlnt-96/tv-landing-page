@@ -23,7 +23,7 @@ export const section10Content: ISection10Content[] = [
   },
   {
     title: 'Chi nhánh Vĩnh Khánh',
-    address: '014 Tòa nhà H1 Vĩnh Khánh, phường 9, quận 4',
+    address: '14-15 Tòa nhà H1 Vĩnh Khánh, phường 9, quận 4',
     phoneNumber: '(028) 39433339',
   },
 ];

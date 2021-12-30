@@ -33,11 +33,11 @@ const Section10: FC = () => {
               </div>
             ))}
           </div>
-          <div className="company-email">
-            <p>
-              <b>Email: </b>
-            </p>
-          </div>
+          {/*<div className="company-email">*/}
+          {/*  <p>*/}
+          {/*    <b>Email: </b>*/}
+          {/*  </p>*/}
+          {/*</div>*/}
           <div className="company-website">
             <p>
               <b>Website: </b>http://www.hethonggiaoductanvan.edu.vn

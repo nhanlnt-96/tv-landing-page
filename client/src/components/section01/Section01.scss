@@ -27,10 +27,10 @@
   }
 
   .section01-main-content .title {
-    background: url('../../assets/imgs/title.png') no-repeat center;
-    background-size: 100% 100%;
-    width: 960px;
-    height: 300px;
+    //background: url('../../assets/imgs/title.png') no-repeat center;
+    //background-size: 100% 100%;
+    //width: 960px;
+    //height: 300px;
     padding-left: 0 !important;
     padding-right: 0 !important;
     @include flex-center;
@@ -50,8 +50,7 @@
     }
 
     .item {
-      height: 160px;
-      width: 750px;
+      width: 960px;
       padding-top: 15px;
       @include flex-center;
       flex-direction: column;
@@ -69,8 +68,14 @@
       }
 
       h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 3.5rem;
+        font-size: 6rem;
+        font-family: 'Arima Madurai', cursive;
+        font-weight: bold;
+        color: #ffffff;
+
+        &:last-child {
+          font-size: 2.5rem;
+        }
 
         &:last-child {
           font-size: 3rem;
@@ -82,12 +87,8 @@
             font-size: 2.5rem;
           }
         }
-        @include mobile {
-          font-size: 4rem;
-          font-family: 'Arima Madurai', cursive;
-          font-weight: bolder;
-          color: #ffffff;
-
+        @include mobile{
+          font-size: 3rem;
           &:last-child {
             font-size: 2.5rem;
           }
