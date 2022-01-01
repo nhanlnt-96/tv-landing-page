@@ -37,8 +37,8 @@
           flex-direction: column;
           margin-left: 10px;
 
-          .title, .subtitle {
-            font-size: 2rem;
+          .title, .subtitle, p {
+            font-size: 2.5rem;
             @include mobile {
               font-size: 1.5rem;
             }
@@ -53,7 +53,7 @@
             }
           }
 
-          .title {
+          .title, p {
             font-family: "Times New Roman", sans-serif;
             font-weight: bold;
           }
@@ -61,7 +61,6 @@
           .subtitle {
             font-family: tekton-pro, sans-serif;
             font-weight: lighter;
-            font-style: italic;
           }
         }
 

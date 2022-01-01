@@ -18,8 +18,13 @@ const Header: FC = () => {
           <div className="logo-content">
             <Image src={Logo} rounded />
             <div className="img-desc">
-              <p className="title">HỆ THỐNG GIÁO DỤC TÂN VĂN</p>
-              <p className="subtitle">Tan Van Education System</p>
+              <p className="title d-flex" style={{ color: '#028139' }}>
+                HỆ THỐNG GIÁO DỤC{' '}
+                <p style={{ color: '#FC161B', marginLeft: '5px' }}> TÂN VĂN</p>
+              </p>
+              <p className="subtitle" style={{ color: '#3336D0' }}>
+                Tan Van Education System
+              </p>
             </div>
           </div>
         </Col>
